@@ -2,7 +2,7 @@ import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import { useContext } from 'react';
 import { useRoutes } from 'react-router-dom';
-import AppContext from '../AppContext';
+import AppContext from '../contexts/AppContext';
 import NavBar from './layout-portfolio/components/navbar/navbar.component';
 
 const Root = styled('div')(({ theme }) => ({

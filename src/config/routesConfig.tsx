@@ -6,7 +6,7 @@ import { generateRoutesFromConfigs } from './utils';
 const routeConfigs = [HomeConfig];
 
 const routes = [
-  ...generateRoutesFromConfigs(routeConfigs, null),
+  ...generateRoutesFromConfigs(routeConfigs),
   {
     path: '/',
     element: <Navigate to="/home" />,

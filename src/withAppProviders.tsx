@@ -4,7 +4,7 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import { StyledEngineProvider } from '@mui/material/styles';
 import store from './store';
-import AppContext from './AppContext';
+import AppContext from './contexts/AppContext';
 import routes from './config/routesConfig';
 
 const withAppProviders = (Component:any) => (props: any) => {
