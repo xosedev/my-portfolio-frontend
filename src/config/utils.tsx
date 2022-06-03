@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { createTheme } from "@mui/material";
 
 export function generateRoutesFromConfigs(configs: any[]) {
     let allRoutes: any[] = [];
@@ -22,3 +23,28 @@ function setRoutes(config: any) {
 
     return [...routes];
 }
+
+
+export const lightTheme = createTheme({
+  palette: {
+    mode: "light",
+    background: {
+      paper: "#f2f2f2",
+    },
+    text: {
+      primary: "#11111",
+    },
+  },
+});
+
+export const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+    background: {
+      paper: "#222",
+    },
+    text: {
+      primary: "#fff",
+    },
+  },
+});

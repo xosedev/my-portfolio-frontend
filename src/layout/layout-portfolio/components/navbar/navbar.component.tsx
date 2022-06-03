@@ -13,13 +13,17 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import CodeIcon from '@mui/icons-material/Code';
 import styles from './styles';
-
+import Brightness5Icon from '@mui/icons-material/Brightness5';
+import { useDispatch } from 'react-redux';
+import { toggleTheme } from '../../../../store/themeSlice';
 const pages = ['About me','Blog','Projects', 'Game Studio', 'Contact', 'Links'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
+
 const NavBar = () => {
   const PAGE_NAME= process.env.REACT_APP_PAGE_NAME
-  
+  const dispatch = useDispatch();
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -30,6 +34,11 @@ const NavBar = () => {
     setAnchorElUser(event.currentTarget);
   };
 
+  const changeModeTheme = (event: React.MouseEvent<HTMLElement>) => {
+    dispatch(toggleTheme())
+  };
+  
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
@@ -37,6 +46,8 @@ const NavBar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+ 
 
   return (
     <AppBar position="static">
@@ -110,6 +121,9 @@ const NavBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
+            <IconButton onClick={changeModeTheme} sx={{  p: 0, marginRight: 5}}>
+              <Brightness5Icon/>
+            </IconButton>
             <Tooltip title="Menu hidden">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="JT"/>

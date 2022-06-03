@@ -1,13 +1,19 @@
 import React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
-import LayoutPortfolio from './layout/layout-portfolio';
+import {  ThemeProvider } from '@mui/material/styles';
+import { CssBaseline, ThemeOptions } from '@mui/material';
 import withAppProviders from './withAppProviders';
 import { BrowserRouter } from 'react-router-dom';
-const theme = createTheme();
+import LayoutPortfolio from './layout/layout-portfolio/layoutPortfolio';
+import { useSelector } from 'react-redux';
+import { darkTheme, lightTheme } from './config/utils';
+import { StateFromReducersMapObject } from '@reduxjs/toolkit';
+
 function App() {
+
+  const theme = useSelector((state: any) => state.theme);
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme.darkTheme ? darkTheme : lightTheme}>
       <CssBaseline />
       <BrowserRouter>
         <LayoutPortfolio />

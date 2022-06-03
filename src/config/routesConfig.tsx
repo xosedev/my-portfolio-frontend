@@ -10,7 +10,6 @@ const routes = [
   {
     path: '/',
     element: <Navigate to="/home" />,
-    auth: null,
   },
   {
     path: '404',
