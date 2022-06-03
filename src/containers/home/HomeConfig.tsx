@@ -1,7 +1,7 @@
 import i18next from 'i18next';
+import Home from './Home';
 
 import en from './i18n/es';
-import Home from './Home';
 
 i18next.addResourceBundle('es', 'homePage', en);
 

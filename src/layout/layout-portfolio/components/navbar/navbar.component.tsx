@@ -16,14 +16,15 @@ import styles from './styles';
 import Brightness5Icon from '@mui/icons-material/Brightness5';
 import { useDispatch } from 'react-redux';
 import { toggleTheme } from '../../../../store/themeSlice';
-const pages = ['About me','Blog','Projects', 'Game Studio', 'Contact', 'Links'];
+import { useNavigate } from 'react-router-dom';
+const pages = [{ id: 'about-me', name : 'About me'},];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
 const NavBar = () => {
   const PAGE_NAME= process.env.REACT_APP_PAGE_NAME
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -41,6 +42,11 @@ const NavBar = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+
+  const navidateToPage = (page: string) => {
+    navigate(page, { replace: true });
   };
 
   const handleCloseUserMenu = () => {
@@ -92,8 +98,8 @@ const NavBar = () => {
               sx={styles.menuSx}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -111,11 +117,11 @@ const NavBar = () => {
           <Box sx={styles.boxPageContainerSx}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.id}
+                onClick={ () => navidateToPage(page.id)}
                 sx={styles.btnPageSxFull}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
