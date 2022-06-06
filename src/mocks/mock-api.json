@@ -93,6 +93,22 @@
           {
             "id": "about-me",
             "name": "AboutMe"
+          },
+          {
+            "id": "projects",
+            "name": "Projects"
+          },
+          {
+            "id": "games",
+            "name": "Game studio"
+          },
+          {
+            "id": "links",
+            "name": "Links"
+          },
+          {
+            "id": "contact",
+            "name": "Contact"
           }
         ]
       }

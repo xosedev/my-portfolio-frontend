@@ -1,12 +1,12 @@
 import { styled } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
-import StructurePage from '../../shared/components/StructurePage';
+import StructurePage from '../../../shared/components/StructurePage';
 
 const Root = styled(StructurePage)(({ theme }) => ({
 }));
 
-function AboutMePage() {
-  const { t } = useTranslation('aboutMePage');
+function HomePage() {
+  const { t } = useTranslation('homePage');
 
   return (
     <Root content={
@@ -24,4 +24,4 @@ function AboutMePage() {
   );
 }
 
-export default AboutMePage;
+export default HomePage;
