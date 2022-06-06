@@ -4,8 +4,9 @@ import HomeConfig from '../containers/home/HomeConfig';
 import AboutMeConfig from '../containers/about-me/AboutMeConfig';
 
 import { generateRoutesFromConfigs } from './utils';
+import BlogConfig from '../containers/blog/BlogConfig';
 
-const routeConfigs = [HomeConfig, AboutMeConfig];
+const routeConfigs = [HomeConfig, AboutMeConfig, BlogConfig];
 
 const routes = [
   ...generateRoutesFromConfigs(routeConfigs),
@@ -16,6 +17,10 @@ const routes = [
   {
     path: '/about-me',
     element: <Navigate to="/about-me" />,
+  },
+  {
+    path: '/blog',
+    element: <Navigate to="/blog" />,
   },
   {
     path: '404',

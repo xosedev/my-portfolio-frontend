@@ -14,19 +14,27 @@ import MenuItem from '@mui/material/MenuItem';
 import CodeIcon from '@mui/icons-material/Code';
 import styles from './styles';
 import Brightness5Icon from '@mui/icons-material/Brightness5';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '../../../../store/themeSlice';
 import { useNavigate } from 'react-router-dom';
-const pages = [{ id: 'about-me', name : 'About me'},];
+import { useEffect } from 'react';
+import reducer from './store';
+import withReducer from '../../../../store/withReducer';
+import { getMenus, selectMenus } from './store/dataSlice';
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-
 const NavBar = () => {
   const PAGE_NAME= process.env.REACT_APP_PAGE_NAME
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+
+  const menus = useSelector(selectMenus);
+
+  useEffect(() => {
+    dispatch(getMenus() as any);
+    
+  }, [dispatch]);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -57,9 +65,11 @@ const NavBar = () => {
 
   return (
     <AppBar position="static">
+      
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <CodeIcon sx={styles.codeIconSx} />
+          
           <Typography
             variant="h6"
             noWrap
@@ -68,6 +78,7 @@ const NavBar = () => {
             sx={styles.logoNameSx}
           >
             {PAGE_NAME}
+           
           </Typography>
 
           <Box sx={styles.boxContainerSx}>
@@ -79,6 +90,8 @@ const NavBar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
+
+         
               <MenuIcon />
             </IconButton>
             <Menu
@@ -97,9 +110,9 @@ const NavBar = () => {
               onClose={handleCloseNavMenu}
               sx={styles.menuSx}
             >
-              {pages.map((page) => (
-                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.name}</Typography>
+              {menus.map((menu: any) => (
+                <MenuItem key={menu.id} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{menu.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -115,17 +128,17 @@ const NavBar = () => {
             {PAGE_NAME}
           </Typography>
           <Box sx={styles.boxPageContainerSx}>
-            {pages.map((page) => (
+            {menus.map((menu: any) => (
               <Button
-                key={page.id}
-                onClick={ () => navidateToPage(page.id)}
+                key={menu.id}
+                onClick={ () => navidateToPage(menu.id)}
                 sx={styles.btnPageSxFull}
               >
-                {page.name}
+                {menu.name}
               </Button>
             ))}
           </Box>
-
+          
           <Box sx={{ flexGrow: 0 }}>
             <IconButton onClick={changeModeTheme} sx={{  p: 0, marginRight: 5}}>
               <Brightness5Icon/>
@@ -163,4 +176,4 @@ const NavBar = () => {
     </AppBar>
   );
 };
-export default NavBar;
+export default withReducer('navBar', reducer)(NavBar);

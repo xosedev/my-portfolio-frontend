@@ -1,0 +1,108 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Mock Api Portfolio",
+    "version": "1.0.0",
+    "contact": {
+      "url": "http://xosedev.com/",
+      "email": "xosedev@gmail.com",
+      "name": "xosedev"
+    },
+    "description": "xosedev Mock API Open API Definitions",
+    "license": {
+      "name": "private"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api"
+    }
+  ],
+  "paths": {
+    "/menus": {
+      "get": {
+        "summary": "Obtain Menus",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/menus"
+                  }
+                },
+                "examples": {
+                  "menu": {
+                    "$ref": "#/components/examples/menus"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_menus",
+        "description": "Obtain menus",
+        "tags": [
+          "Data"
+        ]
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "menus": {
+        "description": "",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "x-examples": {
+          "menu-1": {
+            "id": "1a470c8e-40ed-4c2d-b590-a4f1f6ead6cc",
+            "name": "Inicio"
+          }
+        }
+      }
+    },
+    "securitySchemes": {},
+    "examples": {
+      "menus": {
+        "value": [
+          {
+            "id": "/",
+            "name": "Inicio"
+          },
+          {
+            "id": "blog",
+            "name": "Blog"
+          },
+          {
+            "id": "about-me",
+            "name": "AboutMe"
+          }
+        ]
+      }
+    },
+    "responses": {}
+  },
+  "tags": [
+    {
+      "name": "Data",
+      "description": "Data of portfolio"
+    }
+  ]
+}

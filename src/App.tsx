@@ -1,4 +1,5 @@
 import React from 'react';
+import './mocks';
 import {  ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import withAppProviders from './withAppProviders';
