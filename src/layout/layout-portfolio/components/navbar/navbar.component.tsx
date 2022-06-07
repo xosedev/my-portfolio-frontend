@@ -57,6 +57,11 @@ const NavBar = () => {
     navigate(page, { replace: true });
   };
 
+  const navidateToPageAndClose = (page: string) => {
+    setAnchorElNav(null);
+    navigate(page, { replace: true });
+  };
+
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
@@ -66,7 +71,7 @@ const NavBar = () => {
   return (
     <AppBar position="static">
       
-      <Container maxWidth="xl">
+      <Container className='max-w-7xl'>
         <Toolbar disableGutters>
           <CodeIcon sx={styles.codeIconSx} />
           
@@ -111,7 +116,9 @@ const NavBar = () => {
               sx={styles.menuSx}
             >
               {menus.map((menu: any) => (
-                <MenuItem key={menu.id} onClick={handleCloseNavMenu}>
+                <MenuItem key={menu.id}
+                onClick={ () => navidateToPageAndClose(menu.id)}
+                 >
                   <Typography textAlign="center">{menu.name}</Typography>
                 </MenuItem>
               ))}
