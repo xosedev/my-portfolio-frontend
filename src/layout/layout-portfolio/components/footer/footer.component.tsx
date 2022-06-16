@@ -1,6 +1,5 @@
 import { Box, Toolbar } from '@mui/material';
-import * as React from 'react';
-import { Button, Container, Stack, Typography } from '@mui/material';
+import { Container } from '@mui/material';
 const Footer = (props: any) => {
 
 

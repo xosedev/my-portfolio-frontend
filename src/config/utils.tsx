@@ -1,6 +1,5 @@
 import _ from 'lodash';
-import { colors, createTheme } from "@mui/material";
-import { color } from '@mui/system';
+import { createTheme } from "@mui/material";
 
 export const lightPaletteText = {
   primary: 'rgb(17, 24, 39)',

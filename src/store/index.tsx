@@ -1,6 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
 import createReducer from './rootReducer';
-import thunkMiddleware from 'redux-thunk';
 
 if (process.env.NODE_ENV === 'development' && module.hot) {
   module.hot.accept('./rootReducer', () => {

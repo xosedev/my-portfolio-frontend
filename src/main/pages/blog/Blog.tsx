@@ -1,5 +1,4 @@
-import { Card, CardHeader, Avatar, IconButton, Typography, CardContent, CardActions, Button, Box, List, ListItem, ListItemText, Paper, Input } from '@mui/material';
-import { lighten, styled } from '@mui/material/styles';
+import { Card, CardHeader, Avatar, IconButton, Typography, CardContent, CardActions, Button, styled } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import StructurePage from '../../../shared/components/StructurePage';
 import { motion } from 'framer-motion';
