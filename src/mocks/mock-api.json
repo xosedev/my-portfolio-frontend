@@ -49,6 +49,37 @@
         ]
       },
       "parameters": []
+    },
+    "/llinks": {
+      "get": {
+        "summary": "Obtain links",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/links"
+                  }
+                },
+                "examples": {
+                  "menu": {
+                    "$ref": "#/components/examples/links"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_links",
+        "description": "Obtain links",
+        "tags": [
+          "Data"
+        ]
+      },
+      "parameters": []
     }
   },
   "components": {
@@ -72,6 +103,30 @@
         ],
         "x-examples": {
           "menu-1": {
+            "id": "1a470c8e-40ed-4c2d-b590-a4f1f6ead6cc",
+            "name": "Inicio"
+          }
+        }
+      },
+      "links": {
+        "description": "",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "x-examples": {
+          "link-1": {
             "id": "1a470c8e-40ed-4c2d-b590-a4f1f6ead6cc",
             "name": "Inicio"
           }
@@ -115,7 +170,46 @@
           {
             "id": "contact",
             "name": "Contact",
+            "status": "on"
+          }
+        ]
+      },
+      "links": {
+        "value": [
+          {
+            "id": "/",
+            "name": "Inicio",
+            "status": "on"
+          },
+          {
+            "id": "blog",
+            "name": "Blog",
             "status": "off"
+          },
+          {
+            "id": "about-me",
+            "name": "AboutMe",
+            "status": "on"
+          },
+          {
+            "id": "projects",
+            "name": "Projects",
+            "status": "on"
+          },
+          {
+            "id": "games",
+            "name": "Game studio",
+            "status": "on"
+          },
+          {
+            "id": "links",
+            "name": "Links",
+            "status": "on"
+          },
+          {
+            "id": "contact",
+            "name": "Contact",
+            "status": "on"
           }
         ]
       }

@@ -73,14 +73,6 @@ function ProjectsPage() {
     },
   ];
   
-  const container = {
-    show: {
-      transition: {
-        staggerChildren: 0.05,
-      },
-    },
-  };
-
 
   return (
     <Root content={
@@ -90,7 +82,7 @@ function ProjectsPage() {
             <div className=" rounded-lg ">
               <h4>{t('TITLE')}</h4>
             
-              <motion.div variants={container} initial="hidden" animate="show" className="w-full">
+              <motion.div className="w-full">
                 <Box sx={{ width: '100%' }}>
                   <Grid container rowSpacing={3} columnSpacing={{ xs: 3, sm: 3, md: 3 }}>
                   {itemData.map((item) => (
