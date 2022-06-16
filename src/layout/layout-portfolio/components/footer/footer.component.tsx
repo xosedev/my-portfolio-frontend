@@ -1,6 +1,6 @@
 import { Box, Toolbar } from '@mui/material';
 import * as React from 'react';
-
+import { Button, Container, Stack, Typography } from '@mui/material';
 const Footer = (props: any) => {
 
 
@@ -17,7 +17,9 @@ const Footer = (props: any) => {
     }}
   >
     <Toolbar className="min-h-48 md:min-h-64 px-8 sm:px-12 py-0 flex items-center overflow-x-auto">
-      <div className='max-w-7xl'>example</div>
+      <Container>
+       <div className='max-w-7xl'>example</div>
+      </Container>
     </Toolbar>
   </Box>
   );

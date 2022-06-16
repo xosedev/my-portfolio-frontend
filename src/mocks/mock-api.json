@@ -84,31 +84,38 @@
         "value": [
           {
             "id": "/",
-            "name": "Inicio"
+            "name": "Inicio",
+            "status": "on"
           },
           {
             "id": "blog",
-            "name": "Blog"
+            "name": "Blog",
+            "status": "off"
           },
           {
             "id": "about-me",
-            "name": "AboutMe"
+            "name": "AboutMe",
+            "status": "on"
           },
           {
             "id": "projects",
-            "name": "Projects"
+            "name": "Projects",
+            "status": "on"
           },
           {
             "id": "games",
-            "name": "Game studio"
+            "name": "Game studio",
+            "status": "on"
           },
           {
             "id": "links",
-            "name": "Links"
+            "name": "Links",
+            "status": "on"
           },
           {
             "id": "contact",
-            "name": "Contact"
+            "name": "Contact",
+            "status": "off"
           }
         ]
       }

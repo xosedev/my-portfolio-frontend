@@ -116,7 +116,9 @@ const NavBar = () => {
               sx={styles.menuSx}
             >
               {menus.map((menu: any) => (
-                <MenuItem key={menu.id}
+                <MenuItem
+                style={{display: menu.status === 'on' ? 'block' : 'none' }}
+                key={menu.id}
                 onClick={ () => navidateToPageAndClose(menu.id)}
                  >
                   <Typography textAlign="center">{menu.name}</Typography>
@@ -137,6 +139,7 @@ const NavBar = () => {
           <Box sx={styles.boxPageContainerSx}>
             {menus.map((menu: any) => (
               <Button
+                style={{display: menu.status === 'on' ? 'block' : 'none' }}
                 key={menu.id}
                 onClick={ () => navidateToPage(menu.id)}
                 sx={styles.btnPageSxFull}

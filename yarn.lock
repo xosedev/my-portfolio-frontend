@@ -2310,7 +2310,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.8 || ^17.0 || ^18.0", "@types/react@^17.0.0 || ^18.0.0", "@types/react@^18.0.0":
+"@types/react@*", "@types/react@^0.14.0", "@types/react@^16.8 || ^17.0 || ^18.0", "@types/react@^17.0.0 || ^18.0.0", "@types/react@^18.0.0":
   "integrity" "sha512-9bjbg1hJHUm4De19L1cHiW0Jvx3geel6Qczhjd0qY5VKVE2X5+x77YxAepuCwVh4vrgZJdgEJw48zrhRIeF4Nw=="
   "resolved" "https://registry.npmjs.org/@types/react/-/react-18.0.9.tgz"
   "version" "18.0.9"
@@ -7714,6 +7714,13 @@
     "loose-envify" "^1.1.0"
     "scheduler" "^0.22.0"
 
+"react-easy-emoji@^1.6.1":
+  "integrity" "sha512-VCGm1tAAdOCNVh6j+M1KoWZn4FIXcqdnf0rXINo0Sgo7eF2sat/JhITKFl8PmbpfIYqYLOobpFDVpst4ddJUlw=="
+  "resolved" "https://registry.npmjs.org/react-easy-emoji/-/react-easy-emoji-1.6.1.tgz"
+  "version" "1.6.1"
+  dependencies:
+    "string-replace-to-array" "^2.1.0"
+
 "react-error-overlay@^6.0.11":
   "integrity" "sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg=="
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz"
@@ -7845,7 +7852,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0", "react@^18.0.0", "react@^18.1.0", "react@>= 16", "react@>= 16.8.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8 || ^17.0.0 || ^18.0.0", "react@>=16.8.0":
+"react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0", "react@^18.0.0", "react@^18.1.0", "react@>= 16", "react@>= 16.8.0", "react@>=0.14.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8 || ^17.0.0 || ^18.0.0", "react@>=16.8.0":
   "integrity" "sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.1.0.tgz"
   "version" "18.1.0"
@@ -8525,6 +8532,11 @@
   "integrity" "sha512-n3sPwynL1nwKi3WJ6AIsClwBMa0zTi54fn2oLU6ndfTSIO05xaznjSf15PcBZU6FNWbmN5Q6cxT4V5hGvB4taw=="
   "resolved" "https://registry.npmjs.org/string-natural-compare/-/string-natural-compare-3.0.1.tgz"
   "version" "3.0.1"
+
+"string-replace-to-array@^2.1.0":
+  "integrity" "sha512-xG2w4fE5FsTXS4AFxoF3uctByqTIFBX8lFRNcPcIznTVCMXbYvbatkPVLpAo13tfuWtzbWEV6u5bjoE9bOv87w=="
+  "resolved" "https://registry.npmjs.org/string-replace-to-array/-/string-replace-to-array-2.1.0.tgz"
+  "version" "2.1.0"
 
 "string-width@^4.1.0", "string-width@^4.2.0":
   "integrity" "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g=="

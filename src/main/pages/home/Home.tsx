@@ -2,7 +2,8 @@ import { Button, Container, Stack, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import StructurePage from '../../../shared/components/StructurePage';
-
+import emoji from "react-easy-emoji";
+import "./style.css";
 const Root = styled(StructurePage)(({ theme }) => ({
 }));
 
@@ -25,19 +26,21 @@ function HomePage() {
                   color="text.primary"
                   gutterBottom
                 >
-                   Lorem Ipsum
+                Hola <span className="wave-emoji">{emoji("😸")}</span>
                 </Typography>
-                <Typography variant="h5" align="center" color="text.secondary" paragraph>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                <Typography variant="h5" align="center" paragraph justifyContent="center">
+                  Bienvenidos a mi sitio web, mi nombre es Jose Toro, soy desarrollador de software.<br/>
+                  Tengo experiencia con Java, Node Js, Angular, React, React Native entre otros. <br/>
+                  Desarrollo aplicaciones mobiles y web
                 </Typography>
+
                 <Stack
                   sx={{ pt: 4 }}
                   direction="row"
                   spacing={2}
                   justifyContent="center"
                 >
-                  <Button variant="outlined">Test</Button>
-                  <Button variant="outlined">Test</Button>
+                  <Button variant="outlined" color="error">Mas Sobre mi</Button>
                 </Stack>
               </Container>
 
