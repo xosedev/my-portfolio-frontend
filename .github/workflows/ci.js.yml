@@ -37,9 +37,9 @@ jobs:
           port: 22
           script: |
             cd /var/www/my-portfolio-frontend
-            git pull
+            git pull origin main
             yarn build
             cd /var/www/html
             rm -r -v !(".htaccess")
-            cd /var/www/my-portfolio-frontend/dist
+            cd /var/www/my-portfolio-frontend/build
             cp * /var/www/html
