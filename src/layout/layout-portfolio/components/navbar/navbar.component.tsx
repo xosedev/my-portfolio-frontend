@@ -69,7 +69,9 @@ const NavBar = () => {
 
 
   return (
-    <AppBar position="static" color="default" sx={{
+    <AppBar position="static"
+    className="flex relative z-20 shadow-md sticky top-0"
+    color="default" sx={{
       backgroundColor: (theme) =>
         theme.palette.mode === 'light'
           ? theme.palette.background.paper
@@ -77,7 +79,7 @@ const NavBar = () => {
     }}>
 
       <Container className='max-w-7xl'>
-        <Toolbar disableGutters>
+      <Toolbar className="p-0 min-h-48 md:min-h-64">
           <CodeIcon sx={styles.codeIconSx} />
 
           <Typography
