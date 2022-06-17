@@ -31,8 +31,8 @@ jobs:
       - name: Deploy using ssh
         uses: appleboy/ssh-action@master
         with:
-          local: dist/
-          remote: /var/www/html
+          source: ".,!node_modules"
+          target: /var/www/html
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIVATE_KEY }}
