@@ -42,4 +42,4 @@ jobs:
             cd /var/www/html
             rm * -r
             cd /var/www/my-portfolio-frontend/build
-            cp * /var/www/html
+            cp -r * /var/www/html
