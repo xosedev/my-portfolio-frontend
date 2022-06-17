@@ -31,9 +31,11 @@ jobs:
       - name: Deploy using ssh
         uses: appleboy/ssh-action@master
         with:
+          local: dist/
+          remote: /var/www/html
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           script: |
-            cd ~/var/www/html
+            cd /var/www/html
