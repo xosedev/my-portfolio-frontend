@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
-import { useContext } from 'react';
+import { memo, useContext } from 'react';
 import { useRoutes } from 'react-router-dom';
 import AppContext from '../../contexts/AppContext';
 import Footer from './components/footer/footer.component';
@@ -25,4 +25,4 @@ const LayoutPortfolio = () => {
             </div>
         </Root>);
 };
-export default LayoutPortfolio;
+export default memo(LayoutPortfolio);

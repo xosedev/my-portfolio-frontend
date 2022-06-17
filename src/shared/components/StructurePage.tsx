@@ -30,8 +30,8 @@ const Root = styled('div')(({ theme, ...props }) => ({
     flexDirection: 'column',
     width: '100%',
     flex: '1 1 auto',
-    overflow: 'hidden',
-    //    WebkitOverflowScrolling: 'touch',
+    //overflow: 'hidden',
+    WebkitOverflowScrolling: 'touch',
     zIndex: 9999,
   },
 }
@@ -50,7 +50,6 @@ const StructurePage = forwardRef((props: any, ref) => {
           <div className="xosedev-wrapper">
             <div
               className="structurePage-content">
-
               {props.header && <StructurePageHeader header={props.header} />}
               {props.content}
             </div>
