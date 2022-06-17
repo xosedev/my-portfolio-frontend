@@ -30,8 +30,7 @@ const styles = {
     menuSx: {
         display: { xs: 'block', md: 'none' },
       },
-    boxPageContainerSx: { flexGrow: 1, display: { xs: 'none', md: 'flex' } },
-    btnPageSxFull: { my: 2, color: 'white', display: 'block' }
+    boxPageContainerSx: { flexGrow: 1, display: { xs: 'none', md: 'flex' } }
 
 } as const;
 

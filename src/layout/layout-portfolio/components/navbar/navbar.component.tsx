@@ -23,7 +23,7 @@ import withReducer from '../../../../store/withReducer';
 import { getMenus, selectMenus } from './store/dataSlice';
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const NavBar = () => {
-  const PAGE_NAME= process.env.REACT_APP_PAGE_NAME
+  const PAGE_NAME = process.env.REACT_APP_PAGE_NAME
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -33,7 +33,7 @@ const NavBar = () => {
 
   useEffect(() => {
     dispatch(getMenus() as any);
-    
+
   }, [dispatch]);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -46,7 +46,7 @@ const NavBar = () => {
   const changeModeTheme = (event: React.MouseEvent<HTMLElement>) => {
     dispatch(toggleTheme())
   };
-  
+
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -66,15 +66,20 @@ const NavBar = () => {
     setAnchorElUser(null);
   };
 
- 
+
 
   return (
-    <AppBar position="static">
-      
+    <AppBar position="static" color="default" sx={{
+      backgroundColor: (theme) =>
+        theme.palette.mode === 'light'
+          ? theme.palette.background.paper
+          : theme.palette.background.default,
+    }}>
+
       <Container className='max-w-7xl'>
         <Toolbar disableGutters>
           <CodeIcon sx={styles.codeIconSx} />
-          
+
           <Typography
             variant="h6"
             noWrap
@@ -83,7 +88,7 @@ const NavBar = () => {
             sx={styles.logoNameSx}
           >
             {PAGE_NAME}
-           
+
           </Typography>
 
           <Box sx={styles.boxContainerSx}>
@@ -96,7 +101,7 @@ const NavBar = () => {
               color="inherit"
             >
 
-         
+
               <MenuIcon />
             </IconButton>
             <Menu
@@ -117,11 +122,11 @@ const NavBar = () => {
             >
               {menus.map((menu: any) => (
                 <MenuItem
-                style={{display: menu.status === 'on' ? 'block' : 'none' }}
-                key={menu.id}
-                onClick={ () => navidateToPageAndClose(menu.id)}
-                 >
-                  <Typography textAlign="center">{menu.name}</Typography>
+                  style={{ display: menu.status === 'on' ? 'block' : 'none' }}
+                  key={menu.id}
+                  onClick={() => navidateToPageAndClose(menu.id)}
+                >
+                  <Typography textAlign="center" color="default">{menu.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -139,23 +144,31 @@ const NavBar = () => {
           <Box sx={styles.boxPageContainerSx}>
             {menus.map((menu: any) => (
               <Button
-                style={{display: menu.status === 'on' ? 'block' : 'none' }}
+                sx={{
+                  color: (theme) =>
+                    theme.palette.mode === 'light'
+                      ? 'black'
+                      : 'white',
+                  my: 2, display: 'block'
+                }}
+                variant='text'
+                style={{ display: menu.status === 'on' ? 'block' : 'none' }}
                 key={menu.id}
-                onClick={ () => navidateToPage(menu.id)}
-                sx={styles.btnPageSxFull}
+                onClick={() => navidateToPage(menu.id)}
+
               >
                 {menu.name}
               </Button>
             ))}
           </Box>
-          
+
           <Box sx={{ flexGrow: 0 }}>
-            <IconButton onClick={changeModeTheme} sx={{  p: 0, marginRight: 5}}>
-              <Brightness5Icon/>
+            <IconButton onClick={changeModeTheme} sx={{ p: 0, marginRight: 5 }}>
+              <Brightness5Icon />
             </IconButton>
             <Tooltip title="Menu hidden">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="JT"/>
+                <Avatar alt="JT" />
               </IconButton>
             </Tooltip>
             <Menu hidden

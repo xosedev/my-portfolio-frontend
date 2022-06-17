@@ -66,9 +66,9 @@ function LinksPage() {
 
                   <motion.div variants={container} initial="hidden" animate="show" className="w-full">
 
-                    {links.map((link) => (
+                    {links.map((link:any) => (
                       
-                      <Card component={motion.div} variants={item} key={1} className="mb-5">
+                      <Card component={motion.div} variants={item} key={link.id} className="mb-5">
                         <CardHeader
                           avatar={<Avatar aria-label="Recipe" />}
                           action={
