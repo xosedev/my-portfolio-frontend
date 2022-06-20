@@ -69,7 +69,7 @@ const NavBar = () => {
 
 
   return (
-    <AppBar position="static"
+    <AppBar position="fixed"
     className="flex relative z-20 shadow-md sticky top-0"
     color="default" sx={{
       backgroundColor: (theme) =>

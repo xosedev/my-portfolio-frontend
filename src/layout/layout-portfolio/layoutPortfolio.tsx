@@ -17,7 +17,7 @@ const LayoutPortfolio = () => {
             <div className="flex flex-auto min-w-0">
                 <main className="flex flex-col flex-auto min-h-full min-w-0 relative z-10">
                     <NavBar />
-                    <div className="flex flex-col flex-auto min-h-0 relative z-10">
+                    <div className="flex flex-col flex-auto min-h-0 relative z-10 overflow">
                         {useRoutes(routes)}
                     </div>
                     <Footer className="fixed" />

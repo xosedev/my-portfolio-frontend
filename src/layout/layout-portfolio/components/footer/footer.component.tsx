@@ -5,22 +5,20 @@ const Footer = (props: any) => {
 
   return (
     <Box
-    sx={{
-      py: 3,
-      px: 2,
-      mt: 'auto',
-      backgroundColor: (theme) =>
-        theme.palette.mode === 'light'
-          ? theme.palette.grey[200]
-          : theme.palette.grey[800],
-    }}
-  >
-    <Toolbar className="min-h-48 md:min-h-64 px-8 sm:px-12 py-0 flex items-center overflow-x-auto">
-      <Container>
-       <div className='max-w-7xl'>example</div>
-      </Container>
-    </Toolbar>
-  </Box>
+      sx={{
+        mt: 'auto',
+        backgroundColor: (theme) =>
+          theme.palette.mode === 'light'
+            ? theme.palette.grey[200]
+            : theme.palette.grey[800],
+      }}
+    >
+      <Toolbar className="min-h-48 flex items-center overflow-x-auto">
+        <Container className="flex items-center">
+          <div className='flex flex-col items-center w-full'><div>www.xosede.com - @2022</div></div>
+        </Container>
+      </Toolbar>
+    </Box>
   );
 };
 export default Footer;
