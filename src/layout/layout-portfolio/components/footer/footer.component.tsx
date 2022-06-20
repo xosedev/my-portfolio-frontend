@@ -15,7 +15,7 @@ const Footer = (props: any) => {
     >
       <Toolbar className="min-h-48 flex items-center overflow-x-auto">
         <Container className="flex items-center">
-          <div className='flex flex-col items-center w-full'><div>www.xosede.com - @2022</div></div>
+          <div className='flex flex-col items-center w-full'><div>{process.env.REACT_APP_FOOTER_TEXT}</div></div>
         </Container>
       </Toolbar>
     </Box>

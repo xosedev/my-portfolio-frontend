@@ -5,6 +5,9 @@ import { useRoutes } from 'react-router-dom';
 import AppContext from '../../contexts/AppContext';
 import Footer from './components/footer/footer.component';
 import NavBar from './components/navbar/navbar.component';
+import Box from '@mui/material/Box';
+import AddIcon from '@mui/icons-material/Add';
+import { Fab } from '@mui/material';
 
 const Root = styled('div')(({ theme }) => ({
 }));
@@ -20,6 +23,11 @@ const LayoutPortfolio = () => {
                     <div className="flex flex-col flex-auto min-h-0 relative z-10 overflow">
                         {useRoutes(routes)}
                     </div>
+                    <Box>
+                        <Fab color="primary" aria-label="add" style={{ bottom: 80, right: 10, position: 'fixed' }}>
+                            <AddIcon />
+                        </Fab>
+                    </Box>
                     <Footer className="fixed" />
                 </main>
             </div>

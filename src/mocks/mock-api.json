@@ -150,7 +150,7 @@
           {
             "id": "about-me",
             "name": "AboutMe",
-            "status": "on"
+            "status": "off"
           },
           {
             "id": "projects",
@@ -189,7 +189,7 @@
           {
             "id": "about-me",
             "name": "AboutMe",
-            "status": "on"
+            "status": "off"
           },
           {
             "id": "projects",
