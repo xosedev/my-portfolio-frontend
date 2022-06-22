@@ -1,4 +1,4 @@
-import { Avatar, Card, CardHeader, Icon, IconButton,Typography } from '@mui/material';
+import { Avatar, Card, CardHeader, IconButton,Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
