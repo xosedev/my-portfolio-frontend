@@ -12,8 +12,6 @@ const menusAdapter = createEntityAdapter({
 
 export const {
   selectAll: selectMenus,
-  selectEntities: selectLabelsEntities,
-  selectById: selectLabelById,
 } = menusAdapter.getSelectors((state: any) =>  state.navBar.data);
 
 const menusSlice = createSlice({

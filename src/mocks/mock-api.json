@@ -50,7 +50,7 @@
       },
       "parameters": []
     },
-    "/llinks": {
+    "/links": {
       "get": {
         "summary": "Obtain links",
         "responses": {
@@ -75,6 +75,37 @@
         },
         "operationId": "get_links",
         "description": "Obtain links",
+        "tags": [
+          "Data"
+        ]
+      },
+      "parameters": []
+    },
+    "/projects": {
+      "get": {
+        "summary": "Obtain projects",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/projects"
+                  }
+                },
+                "examples": {
+                  "menu": {
+                    "$ref": "#/components/examples/projects"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_projects",
+        "description": "Obtain projects",
         "tags": [
           "Data"
         ]
@@ -119,16 +150,63 @@
           "name": {
             "type": "string",
             "minLength": 1
+          },
+          "icon": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
           }
         },
         "required": [
           "id",
-          "name"
+          "name",
+          "icon",
+          "url"
         ],
         "x-examples": {
           "link-1": {
-            "id": "1a470c8e-40ed-4c2d-b590-a4f1f6ead6cc",
+            "id": "1",
             "name": "Inicio"
+          }
+        }
+      },
+      "projects": {
+        "description": "",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          }
+          ,
+          "desc": {
+            "type": "string",
+            "minLength": 1
+          },
+          "img": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "desc",
+          "img"
+        ],
+        "x-examples": {
+          "project-1": {
+            "id": "1",
+            "name": "Inicio",
+            "desc": "www",
+            "img": "www"
           }
         }
       }
@@ -177,39 +255,61 @@
       "links": {
         "value": [
           {
-            "id": "/",
-            "name": "Inicio",
-            "status": "on"
+            "id": "1",
+            "name": "Instagram",
+            "icon": "https://cdn-icons-png.flaticon.com/128/2111/2111463.png",
+            "url": "https://www.instagram.com/xosedev/"
           },
           {
-            "id": "blog",
-            "name": "Blog",
-            "status": "off"
+            "id": "2",
+            "name": "GitHub",
+            "icon": "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+            "url": "https://github.com/xosedev"
           },
           {
-            "id": "about-me",
-            "name": "AboutMe",
-            "status": "off"
+            "id": "3",
+            "name": "Linkedin",
+            "icon": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+            "url": "https://www.linkedin.com/in/xosedev/"
           },
           {
-            "id": "projects",
-            "name": "Projects",
-            "status": "on"
+            "id": "4",
+            "name": "Twitch",
+            "icon": "https://img.utdstc.com/icon/c28/b9e/c28b9efbfb9482de979459bc95d9951e18ee05228dab49c6dac9b70ee800c9c6:200",
+            "url": "https://www.twitch.tv/xosedev"
+          },{
+            "id": "5",
+            "name": "Youtube",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png",
+            "url": "https://www.youtube.com/channel/UCqeqxQh83EZ_PvcpSHAtgyg"
+          }
+        ]
+      },
+      "projects": {
+        "value": [
+          {
+            "id": "1",
+            "name": "Portfolio Orchestrator",
+            "desc": "on",
+            "img":"https://images.unsplash.com/photo-1471357674240-e1a485acb3e1"
           },
           {
-            "id": "games",
-            "name": "Game studio",
-            "status": "on"
+            "id": "2",
+            "name": "Portfolio Api",
+            "desc": "on",
+            "img":"https://images.unsplash.com/photo-1471357674240-e1a485acb3e1"
           },
           {
-            "id": "links",
-            "name": "Links",
-            "status": "on"
+            "id": "3",
+            "name": "Portfolio Web",
+            "desc": "on",
+            "img":"https://images.unsplash.com/photo-1471357674240-e1a485acb3e1"
           },
           {
-            "id": "contact",
-            "name": "Contact",
-            "status": "on"
+            "id": "4",
+            "name": "InuDesk",
+            "desc": "on",
+            "img":"https://images.unsplash.com/photo-1471357674240-e1a485acb3e1"
           }
         ]
       }

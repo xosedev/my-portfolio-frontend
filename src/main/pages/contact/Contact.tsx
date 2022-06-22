@@ -30,7 +30,7 @@ function LinksPage() {
   const form = watch();
 
   function onSubmit(data: any) {
-    console.log(data);
+   
   }
 
   if (_.isEmpty(form)) {

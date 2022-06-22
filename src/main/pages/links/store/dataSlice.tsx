@@ -12,9 +12,9 @@ const linksAdapter = createEntityAdapter({
 
 export const {
   selectAll: selectLinks,
-  selectEntities: selectLabelsEntities,
-  selectById: selectLabelById,
-} = linksAdapter.getSelectors((state: any) =>  state.navBar.data);
+} = linksAdapter.getSelectors((state: any) => { 
+  return state.linksPage.data
+});
 
 const linksSlice = createSlice({
   name: 'page/links',
