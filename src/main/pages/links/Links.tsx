@@ -9,6 +9,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import { useEffect } from 'react';
 import withReducer from '../../../store/withReducer';
 import reducer from './store';
+import { selectUser } from '../../../store/userSlice';
 
 const Root = styled(StructurePage)(({ theme }) => ({
 
@@ -18,6 +19,8 @@ function LinksPage() {
   const { t } = useTranslation('linksPage');
   const dispatch = useDispatch();
   const links = useSelector(selectLinks);
+  const user = useSelector(selectUser);
+
 
   useEffect(() => {
     dispatch(getLinks() as any);
@@ -47,14 +50,14 @@ function LinksPage() {
                 style={{ height: 128, width: 128 }}
                 alt="img"
                 className="border-4 rounded-full"
-                src="/.uploads/user.jpg"
+                src={user.img}
               />
             </motion.div>
           </div>
 
           <div className="flex flex-col items-center  mt-16">
-            <Typography className="text-lg font-bold leading-none">Jose Toro</Typography>
-            <Typography color="text.secondary">Software developer</Typography>
+            <Typography className="text-lg font-bold leading-none">{user.name}{" "}{user.lastName}</Typography>
+            <Typography color="text.secondary">{user.desc}</Typography>
           </div>
         </div>
 

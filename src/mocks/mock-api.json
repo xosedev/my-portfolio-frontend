@@ -111,10 +111,82 @@
         ]
       },
       "parameters": []
+    },
+    "/owner": {
+      "get": {
+        "summary": "Obtain owner portfolio information",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/owner"
+                },
+                "examples": {
+                  "user": {
+                    "$ref": "#/components/examples/owner"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_menus",
+        "description": "Obtain menus",
+        "tags": [
+          "Data"
+        ]
+      },
+      "parameters": []
     }
   },
   "components": {
     "schemas": {
+      "user": {
+        "description": "",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "mail": {
+            "type": "string",
+            "minLength": 1
+          },
+          "img": {
+            "type": "string",
+            "minLength": 1
+          },
+          "desc": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "lastName",
+          "mail",
+          "img"
+        ],
+        "x-examples": {
+          "menu-1": {
+            "id": "1a470c8e-40ed-4c2d-b590-a4f1f6ead6cc",
+            "name": "Inicio"
+          }
+        }
+      },
       "menus": {
         "description": "",
         "type": "object",
@@ -213,6 +285,16 @@
     },
     "securitySchemes": {},
     "examples": {
+      "owner": {
+        "value": {
+          "id":"1",
+          "name":"Jose",
+          "lastName":"Toro",
+          "mail":"xosedev@gmail.com",
+          "img":"https://www.xosedev.com/.uploads/user.jpg",
+          "desc": "Software Developer"
+        }
+      },
       "menus": {
         "value": [
           {
@@ -257,30 +339,30 @@
           {
             "id": "1",
             "name": "Instagram",
-            "icon": "https://cdn-icons-png.flaticon.com/128/2111/2111463.png",
+            "icon": "https://www.xosedev.com/.uploads/icons/instagram.png",
             "url": "https://www.instagram.com/xosedev/"
           },
           {
             "id": "2",
             "name": "GitHub",
-            "icon": "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+            "icon": "https://www.xosedev.com/.uploads/icons/github.png",
             "url": "https://github.com/xosedev"
           },
           {
             "id": "3",
             "name": "Linkedin",
-            "icon": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+            "icon": "https://www.xosedev.com/.uploads/icons/linkedin.png",
             "url": "https://www.linkedin.com/in/xosedev/"
           },
           {
             "id": "4",
             "name": "Twitch",
-            "icon": "https://img.utdstc.com/icon/c28/b9e/c28b9efbfb9482de979459bc95d9951e18ee05228dab49c6dac9b70ee800c9c6:200",
+            "icon": "https://www.xosedev.com/.uploads/icons/twitch.png",
             "url": "https://www.twitch.tv/xosedev"
           },{
             "id": "5",
             "name": "Youtube",
-            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png",
+            "icon": "https://www.xosedev.com/.uploads/icons/youtube.png",
             "url": "https://www.youtube.com/channel/UCqeqxQh83EZ_PvcpSHAtgyg"
           }
         ]

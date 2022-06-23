@@ -1,4 +1,4 @@
-import './api/menu-api';
+import './api/portfolio-api';
 import history from '../history';
 import mock from './mock';
 

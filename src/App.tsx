@@ -1,12 +1,14 @@
 import React from 'react';
 import './mocks';
-import {  ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import withAppProviders from './withAppProviders';
-import { BrowserRouter } from 'react-router-dom';
 import LayoutPortfolio from './layout/layout-portfolio/layoutPortfolio';
 import { useSelector } from 'react-redux';
 import { darkTheme, lightTheme } from './config/utils';
+import { AuthProvider } from './auth/AuthContext';
+import BrowserRouter from './config/browserRouter';
+
 
 function App() {
 
@@ -15,10 +17,14 @@ function App() {
   return (
     <ThemeProvider theme={theme.darkTheme ? darkTheme : lightTheme}>
       <CssBaseline />
-      <BrowserRouter>
-        <LayoutPortfolio />
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter >
+          <LayoutPortfolio />
+        </BrowserRouter>
+      </AuthProvider>
     </ThemeProvider>
   );
 }
 export default withAppProviders(App)({});
+
+
