@@ -1,5 +1,5 @@
 import './api/portfolio-api';
-import history from '../history';
+import history from '../history/history';
 import mock from './mock';
 
 mock.onAny().passThrough();
