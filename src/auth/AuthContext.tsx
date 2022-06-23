@@ -12,7 +12,7 @@ const AuthProvider = ({ children }: any) => {
     dispatch(getUser() as any)    
     setIsAuthenticated(true);
     console.log(children);
-  }, []);
+  }, [dispatch]);
 
   return  (
     <AuthContext.Provider value={{ isAuthenticated }}>{children}</AuthContext.Provider>
