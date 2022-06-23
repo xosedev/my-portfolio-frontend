@@ -1,8 +1,7 @@
 import { Box, Toolbar } from '@mui/material';
 import { Container } from '@mui/material';
 const Footer = (props: any) => {
-
-
+  
   return (
     <Box
       sx={{

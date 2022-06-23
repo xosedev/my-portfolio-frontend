@@ -1,7 +1,7 @@
-import portfolio from "./layout-portfolio/layoutPortfolio";
+import layoutPortfolio from "./layout-portfolio/layoutPortfolio";
 
 const layoutConfigs = {
-    portfolio
+    layoutPortfolio
 };
 
 export default layoutConfigs;

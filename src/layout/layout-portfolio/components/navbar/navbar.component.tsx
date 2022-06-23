@@ -102,8 +102,6 @@ const NavBar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-
-
               <MenuIcon />
             </IconButton>
             <Menu
@@ -157,7 +155,6 @@ const NavBar = () => {
                 style={{ display: menu.status === 'on' ? 'block' : 'none' }}
                 key={menu.id}
                 onClick={() => navidateToPage(menu.id)}
-
               >
                 {menu.name}
               </Button>
