@@ -11,7 +11,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import CodeIcon from '@mui/icons-material/Code';
 import styles from './styles';
 import Brightness5Icon from '@mui/icons-material/Brightness5';
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,9 +20,9 @@ import { useEffect } from 'react';
 import reducer from './store';
 import withReducer from '../../../../store/withReducer';
 import { getMenus, selectMenus } from './store/dataSlice';
+import Logo from '../../../../shared/components/logo/Logo';
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const NavBar = () => {
-  const PAGE_NAME = process.env.REACT_APP_PAGE_NAME
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -33,7 +32,6 @@ const NavBar = () => {
 
   useEffect(() => {
     dispatch(getMenus() as any);
-
   }, [dispatch]);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -80,8 +78,7 @@ const NavBar = () => {
 
       <Container className='max-w-7xl'>
       <Toolbar className="p-0 min-h-48 md:min-h-64">
-          <CodeIcon sx={styles.codeIconSx} />
-
+         
           <Typography
             variant="h6"
             noWrap
@@ -89,8 +86,7 @@ const NavBar = () => {
             href="/"
             sx={styles.logoNameSx}
           >
-            {PAGE_NAME}
-
+            <Logo/>
           </Typography>
 
           <Box sx={styles.boxContainerSx}>
@@ -131,7 +127,7 @@ const NavBar = () => {
               ))}
             </Menu>
           </Box>
-          <CodeIcon sx={styles.codeIconSxFull} />
+         
           <Typography
             variant="h5"
             noWrap
@@ -139,7 +135,7 @@ const NavBar = () => {
             href=""
             sx={styles.logoNameSxFull}
           >
-            {PAGE_NAME}
+            <Logo/>
           </Typography>
           <Box sx={styles.boxPageContainerSx}>
             {menus.map((menu: any) => (

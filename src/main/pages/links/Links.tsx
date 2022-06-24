@@ -55,7 +55,7 @@ function LinksPage() {
             </motion.div>
           </div>
 
-          <div className="flex flex-col items-center  mt-16">
+          <div className="flex flex-col items-center  mt-8">
             <Typography className="text-lg font-bold leading-none">{user.name}{" "}{user.lastName}</Typography>
             <Typography color="text.secondary">{user.desc}</Typography>
           </div>

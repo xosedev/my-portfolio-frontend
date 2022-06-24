@@ -23,11 +23,11 @@ function HomePage() {
                   <div className="relative z-10 pb-8  sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                       <div className="sm:text-center lg:text-left">
-                        <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <h1 className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">
                           Hola {' '}
                           <span className="wave-emoji">{emoji("😸")}</span>
                         </h1>
-                        <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        <p className="mt-3 text-base sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                           Bienvenidos a mi sitio web, mi nombre es Jose Toro, soy desarrollador de software.<br />
                           Tengo experiencia con Java, Node Js, Angular, React, React Native entre otros. <br />
                           Desarrollo aplicaciones mobiles y web
@@ -57,7 +57,7 @@ function HomePage() {
                 <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 flex  justify-center ">
              
                   <img 
-                    className="scale-0 h-56 sm:h-50 md:h-40 lg:w-80 lg:h-80 lg:mt-40 rounded-full "
+                    className="scale-0 h-56 sm:h-50 md:h-40 lg:w-80 lg:h-80 lg:mt-40 rounded-full shadow-lg shadow-lg"
                     src={user.img}
                     alt=""
                   />
