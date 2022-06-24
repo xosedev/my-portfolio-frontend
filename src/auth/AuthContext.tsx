@@ -11,8 +11,7 @@ const AuthProvider = ({ children }: any) => {
   useEffect(() => {
     dispatch(getUser() as any)    
     setIsAuthenticated(true);
-    console.log(children);
-  }, [dispatch]);
+  },[dispatch]);
 
   return  (
     <AuthContext.Provider value={{ isAuthenticated }}>{children}</AuthContext.Provider>
@@ -26,6 +25,5 @@ function useAuth() {
   }
   return context;
 }
-
 
 export { AuthProvider, useAuth };

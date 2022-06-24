@@ -14,11 +14,7 @@ const userSlice = createSlice({
   reducers: {
   },
   extraReducers: {
-    [getUser.fulfilled as any]: (state, action) => {
-      console.log(action);
-      
-      return action.payload
-    },
+    [getUser.fulfilled as any]: (state, action) =>  action.payload,
   },
 });
 export const selectUser = ({ user }: any) => user;
