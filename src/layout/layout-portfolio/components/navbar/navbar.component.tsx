@@ -86,7 +86,7 @@ const NavBar = () => {
             href="/"
             sx={styles.logoNameSx}
           >
-            <Logo/>
+            <Logo height='45' width='120' />
           </Typography>
 
           <Box sx={styles.boxContainerSx}>
@@ -135,7 +135,7 @@ const NavBar = () => {
             href=""
             sx={styles.logoNameSxFull}
           >
-            <Logo/>
+           <Logo height='45' width='120' />
           </Typography>
           <Box sx={styles.boxPageContainerSx}>
             {menus.map((menu: any) => (

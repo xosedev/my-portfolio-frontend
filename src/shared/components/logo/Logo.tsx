@@ -2,7 +2,12 @@
 import { useTheme } from '@mui/material';
 import { forwardRef, useEffect } from 'react';
 
-const Logo = forwardRef((props: any, ref) => {
+interface LogoProps {
+  height: string;
+  width: string;
+} 
+
+const Logo = forwardRef((props: LogoProps, ref) => {
 
   const { palette } = useTheme();
 
@@ -14,13 +19,13 @@ const Logo = forwardRef((props: any, ref) => {
   return (
     <>
       {
-        palette.mode == 'dark' ? (
-          <svg style={{ height: 45, width: 120, fill: 'red' }}>
-            <image href="./assets/img/2.svg" style={{ height: 50, fill: 'red' }} />
+        palette.mode === 'dark' ? (
+          <svg style={{ height: props.height, width: props.width }}>
+            <image href="./assets/img/2.svg" style={{ height: props.height }} />
           </svg>
         ) : (
-          <svg style={{ height: 45, width: 120, fill: 'red' }}>
-            <image href="./assets/img/1.svg" style={{ height: 50, fill: 'red' }} />
+          <svg style={{ height: props.height, width: props.width }}>
+            <image href="./assets/img/1.svg" style={{ height: props.height }} />
           </svg>
         )
       }
