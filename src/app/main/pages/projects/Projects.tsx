@@ -50,7 +50,7 @@ function ProjectsPage() {
                   <Grid container rowSpacing={3} columnSpacing={{ xs: 3, sm: 3, md: 3 }}>
                   {projects.map((project: any) => (
                     <Grid item xs={12} sm={6} md={3}   key={project.id}>
-                      <Card  component={motion.div} variants={item}  key={project.id}>
+                      <Card  component={motion.div} variants={item}  key={project.id} className='rounded-16'>
                         <CardActionArea>
                           <CardMedia
                             component="img"
@@ -75,8 +75,8 @@ function ProjectsPage() {
                       </Card>
                     </Grid>
                    ))}
-                   <Grid item xs={12} sm={6} md={3}   key={32434234}>
-                      <Card  component={motion.div} variants={item}  key={4353564}>
+                   <Grid item xs={12} sm={6} md={3}   key={100000001} >
+                      <Card  component={motion.div} variants={item}  key={100000001} className='rounded-16'>
                         <CardActionArea>
                           <CardMedia
                             component="img"

@@ -58,3 +58,6 @@ body {
         border-radius: 20px;
     }
 }
+.rounded-16 {
+    border-radius: 1.6rem;
+}
