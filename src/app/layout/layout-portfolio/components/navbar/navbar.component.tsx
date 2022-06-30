@@ -68,7 +68,7 @@ const NavBar = () => {
 
   return (
     <AppBar position="fixed"
-    className="flex relative z-20 shadow-md sticky top-0"
+    className="flex z-20 shadow-md sticky top-0"
     color="default" sx={{
       backgroundColor: (theme) =>
         theme.palette.mode === 'light'
@@ -161,7 +161,7 @@ const NavBar = () => {
             <IconButton onClick={changeModeTheme} sx={{ p: 0, marginRight: 5 }}>
               <Brightness5Icon />
             </IconButton>
-            <Tooltip title="Menu hidden">
+            <Tooltip title="Menu hidden" className='hidden'>
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="JT" />
               </IconButton>

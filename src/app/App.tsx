@@ -2,7 +2,7 @@ import React from 'react';
 import './mocks';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
-import withAppProviders from './withAppProviders';
+import withAppProviders from '../withAppProviders';
 import LayoutPortfolio from './layout/layout-portfolio/layoutPortfolio';
 import { useSelector } from 'react-redux';
 import { darkTheme, lightTheme } from './config/utils';

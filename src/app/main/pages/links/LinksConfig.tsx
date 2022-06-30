@@ -7,7 +7,9 @@ i18next.addResourceBundle('es', 'linksPage', en);
 const LinksConfig = {
   settings: {
     layout: {
-      config: {},
+      config: {
+        data: 'pepe'
+      },
     },
   },
   routes: [

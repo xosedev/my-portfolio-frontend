@@ -56,7 +56,7 @@ function ProjectsPage() {
                             component="img"
                             height="140"
                             image={project.img}
-                            alt="green iguana"
+                            alt="project img"
                           />
                           <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
@@ -81,8 +81,8 @@ function ProjectsPage() {
                           <CardMedia
                             component="img"
                             height="140"
-                            image="https://png.pngitem.com/pimgs/s/238-2384580_project-portfolio-management-software-hackathons-for-beginners-hd.png"
-                            alt="green iguana"
+                            image="http://assets.stickpng.com/thumbs/58889589bc2fc2ef3a1860c0.png"
+                            alt="project img"
                           />
                           <CardContent>
                             <Typography gutterBottom variant="h5" component="div">

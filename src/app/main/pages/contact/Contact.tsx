@@ -39,9 +39,8 @@ function LinksPage() {
   return (
     <Root content={
       <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto y-6p sm:px-6 lg:px-8">
           <div className="px-4 py-6 sm:px-0">
-            <div className="rounded-lg">
                 <h4 >{t('TITLE')}</h4>
                   <Paper className="p-20 pb-20 rounded-2xl">
                     <form onSubmit={handleSubmit(onSubmit)} className="px-0">
@@ -79,7 +78,7 @@ function LinksPage() {
                           render={({ field }) => (
                             <TextField
                               {...field}
-                              className="mt-10 w-full"
+                              className="mt-5 w-full"
                               label="Email"
                               placeholder="Email"
                               variant="outlined"
@@ -97,7 +96,7 @@ function LinksPage() {
                           render={({ field }) => (
                             <TextField
                               {...field}
-                              className="mt-10 w-full"
+                              className="mt-5 w-full"
                               label="Subject"
                               placeholder="Subject"
                               variant="outlined"
@@ -116,7 +115,7 @@ function LinksPage() {
                             <TextField
                               {...field}
                               label="Message"
-                              className="mt-10 w-full"
+                              className="mt-5 w-full"
                               margin="normal"
                               multiline
                               minRows={4}
@@ -129,7 +128,7 @@ function LinksPage() {
                         />
                       </div>
                     </form>
-                    <div className="flex items-center justify-end mt-10">
+                    <div className="flex items-center justify-end mt-5">
                       <Button className="mx-8">Cancel</Button>
                       <Button
                         className="mx-8"
@@ -144,7 +143,7 @@ function LinksPage() {
                   </Paper>
             </div>
           </div>
-        </div>
+      
       </main>
     }>
     </Root>

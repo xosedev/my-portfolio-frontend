@@ -1,5 +1,5 @@
 import { createSelector, createSlice } from '@reduxjs/toolkit';
-import i18n from '../i18n';
+import i18n from '../../i18n';
 
 export const changeLanguage = (languageId: any) => (dispatch: any, getState: any) => {
   return i18n.changeLanguage(languageId).then(() => {

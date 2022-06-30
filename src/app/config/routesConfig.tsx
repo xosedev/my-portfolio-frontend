@@ -1,7 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import Error404Page from '../main/pages/404/Error404Page';
-import HomeConfig from '../main/pages/home/HomeConfig';
-import AboutMeConfig from '../main/pages/about-me/AboutMeConfig';
+
 
 import { generateRoutesFromConfigs } from './utils';
 import BlogConfig from '../main/pages/blog/BlogConfig';
@@ -9,6 +7,9 @@ import ProjectsConfig from '../main/pages/projects/ProjectsConfig';
 import GamesConfig from '../main/pages/games/GamesConfig';
 import LinksConfig from '../main/pages/links/LinksConfig';
 import ContactConfig from '../main/pages/contact/ContactConfig';
+import HomeConfig from '../main/pages/home/HomeConfig';
+import AboutMeConfig from '../main/pages/about-me/AboutMeConfig';
+import Error404Page from '../main/pages/404/Error404Page';
 
 const routeConfigs = [HomeConfig, AboutMeConfig, BlogConfig, ProjectsConfig, GamesConfig, LinksConfig, ContactConfig];
 

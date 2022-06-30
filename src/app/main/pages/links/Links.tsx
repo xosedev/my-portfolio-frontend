@@ -12,7 +12,7 @@ import reducer from './store';
 import { selectUser } from '../../../store/userSlice';
 
 const Root = styled(StructurePage)(({ theme }) => ({
-
+  
 }));
 
 function LinksPage() {
@@ -20,7 +20,6 @@ function LinksPage() {
   const dispatch = useDispatch();
   const links = useSelector(selectLinks);
   const user = useSelector(selectUser);
-
 
   useEffect(() => {
     dispatch(getLinks() as any);
@@ -39,23 +38,22 @@ function LinksPage() {
     show: { opacity: 1, y: 0 },
   };
 
-
   return (
     <Root
       header={
-        <div className="flex flex-col items-center w-full ">
-          <div className="rounded-full items-center pt-10 ">
+        <div className="flex flex-col items-center w-full">
+          <div className="rounded-full items-center pt-10">
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1, transition: { delay: 0.1 } }}>
               <img
                 style={{ height: 128, width: 128 }}
-                alt="img"
+                alt="img user"
                 className="border-4 rounded-full"
                 src={user.img}
               />
             </motion.div>
           </div>
 
-          <div className="flex flex-col items-center  mt-8">
+          <div className="flex flex-col items-center mt-5">
             <Typography className="text-lg font-bold leading-none">{user.name}{" "}{user.lastName}</Typography>
             <Typography color="text.secondary">{user.desc}</Typography>
           </div>
@@ -68,11 +66,8 @@ function LinksPage() {
             <div className="px-4 py-6 sm:px-0">
               <div className="rounded-lg">
                 <h4 hidden>{t('TITLE')}</h4>
-
                   <motion.div variants={container} initial="hidden" animate="show" className="w-full">
-
                     {links.map((link:any) => (
-                      
                       <Card component={motion.div} variants={item} key={link.id} className="mb-5">
                         <CardHeader
                           avatar={<Avatar src={link.icon}></Avatar>}
@@ -86,12 +81,10 @@ function LinksPage() {
                              {link.name}
                             </span>
                           }
-                          subheader={121221}
                         />
                       </Card>
                     ))}
                   </motion.div>
-
               </div>
             </div>
           </div>
