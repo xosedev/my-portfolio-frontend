@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import StructurePage from '../../../shared/components/StructurePage';
 import { getLinks, selectLinks } from './store/dataSlice';
-import CodeIcon from '@mui/icons-material/Code';
+import ArrowRight from '@mui/icons-material/ArrowRight';
 import { useEffect } from 'react';
 import withReducer from '../../../store/withReducer';
 import reducer from './store';
@@ -73,7 +73,7 @@ function LinksPage() {
                           avatar={<Avatar src={link.icon}></Avatar>}
                           action={
                             <IconButton hidden aria-label="more" size="large">
-                              <CodeIcon />
+                              <ArrowRight />
                             </IconButton>
                           }
                           title={

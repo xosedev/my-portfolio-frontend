@@ -265,20 +265,26 @@
           "img": {
             "type": "string",
             "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
           }
         },
         "required": [
           "id",
           "name",
           "desc",
-          "img"
+          "img",
+          "url"
         ],
         "x-examples": {
           "project-1": {
             "id": "1",
             "name": "Inicio",
             "desc": "www",
-            "img": "www"
+            "img": "www",
+            "url": "www"
           }
         }
       }
@@ -372,26 +378,36 @@
           {
             "id": "1",
             "name": "Portfolio Orchestrator",
-            "desc": "on",
-            "img":"https://cdn-icons-png.flaticon.com/512/25/25231.png"
+            "desc": ["Node Js", "TypeScript", "Express", "OpenApi"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://github.com/xosedev/my-portfolio-orchestrator"
           },
           {
             "id": "2",
             "name": "Portfolio Api",
-            "desc": "on",
-            "img":"https://cdn-icons-png.flaticon.com/512/25/25231.png"
+            "desc": ["Node Js", "TypeScript", "Express", "OpenApi", "PostgreSQL"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://github.com/xosedev/my-portfolio-api"
           },
           {
             "id": "3",
             "name": "Portfolio Web",
-            "desc": "on",
-            "img":"https://cdn-icons-png.flaticon.com/512/25/25231.png"
+            "desc": ["React", "Redux", "MUI", "Tailwind"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://github.com/xosedev/my-portfolio-frontend"
           },
           {
             "id": "4",
-            "name": "InuDesk",
-            "desc": "on",
-            "img":"https://cdn-icons-png.flaticon.com/512/25/25231.png"
+            "name": "Shortcuts Manager front",
+            "desc": ["React", "Redux", "MUI", "Tailwind"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://github.com/xosedev/shortcut-manager-frontend"
+          },{
+            "id": "5",
+            "name": "Shortcuts Manager Backend",
+            "desc": ["Node Js", "TypeScript", "Express", "OpenApi", "PostgreSQL"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://github.com/xosedev/shortcut-manager-backend"
           }
         ]
       }

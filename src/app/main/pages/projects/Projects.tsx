@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Chip, Grid, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import StructurePage from '../../../shared/components/StructurePage';
@@ -44,60 +44,60 @@ function ProjectsPage() {
           <div className="px-4 py-6 sm:px-0">
             <div className=" rounded-lg ">
               <h4>{t('TITLE')}</h4>
-            
-              <motion.div  variants={container}  initial="hidden" animate="show" className="w-full">
+
+              <motion.div variants={container} initial="hidden" animate="show" className="w-full">
                 <Box sx={{ width: '100%' }}>
                   <Grid container rowSpacing={3} columnSpacing={{ xs: 3, sm: 3, md: 3 }}>
-                  {projects.map((project: any) => (
-                    <Grid item xs={12} sm={6} md={3}   key={project.id}>
-                      <Card  component={motion.div} variants={item}  key={project.id} className='rounded-16'>
+                    {projects.map((project: any) => (
+                      <Grid item xs={12} sm={6} md={3} key={project.id}>
+                        <Card component={motion.div} variants={item} key={project.id} className='rounded-16'>
+                          <CardActionArea>
+                            <CardMedia
+                              component="img"
+                              height="140"
+                              image={project.img}
+                              alt="project img"
+                            />
+                            <CardContent>
+                              <Typography gutterBottom variant="h5" component="div">
+                                {project.name}
+                              </Typography>
+                              <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 1 }}>
+                              
+                                {project.desc.map((data: any) => (
+                                  <Grid item xs={3} sm={4} md={4} lg={4} key={project.id}>
+                                  <Chip label={data} size="small" />
+                                  </Grid>
+                                ))}
+                              </Grid>
+                            </CardContent>
+                          </CardActionArea>
+                          <CardActions>
+                            <Button size="small" color="primary" href={project.url}>
+                              <GitHub></GitHub>
+                            </Button>
+                          </CardActions>
+                        </Card>
+                      </Grid>
+                    ))}
+                    <Grid item xs={12} sm={6} md={3} key={100000001} >
+                      <Card component={motion.div} variants={item} key={100000001} className='rounded-16'>
                         <CardActionArea>
                           <CardMedia
                             component="img"
                             height="140"
-                            image={project.img}
+                            image="https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg"
                             alt="project img"
                           />
                           <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
-                            {project.name}
+                              coming soon
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                              {project.desc}
+                              coming soon
                             </Typography>
                           </CardContent>
                         </CardActionArea>
-                        <CardActions>
-                          <Button size="small" color="primary">
-                            <GitHub></GitHub>
-                          </Button>
-                        </CardActions>
-                      </Card>
-                    </Grid>
-                   ))}
-                   <Grid item xs={12} sm={6} md={3}   key={100000001} >
-                      <Card  component={motion.div} variants={item}  key={100000001} className='rounded-16'>
-                        <CardActionArea>
-                          <CardMedia
-                            component="img"
-                            height="140"
-                            image="http://assets.stickpng.com/thumbs/58889589bc2fc2ef3a1860c0.png"
-                            alt="project img"
-                          />
-                          <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                            coming soon
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                            coming soon
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                          <Button size="small" color="primary">
-                            <GitHub></GitHub>
-                          </Button>
-                        </CardActions>
                       </Card>
                     </Grid>
                   </Grid>
