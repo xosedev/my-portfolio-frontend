@@ -68,13 +68,11 @@ function HomePage() {
                   </div>
                 </div>
                 <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 flex  justify-center ">
-
                   <img
                     className="scale-0 h-56 sm:h-50 md:h-40 lg:w-80 lg:h-80 lg:mt-40 rounded-full shadow-lg"
                     src={user.img}
                     alt=""
                   />
-
                 </div>
               </div>
             </div>
