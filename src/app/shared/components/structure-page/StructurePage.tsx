@@ -1,10 +1,10 @@
 
 import { styled } from '@mui/material';
 import { forwardRef, memo } from 'react';
-import StructurePageHeader from './StructurePageHeader';
+import StructurePageHeader from '../structure-header/StructurePageHeader';
 import clsx from 'clsx';
 const Root = styled('div')(({ theme, ...props }) => ({
-  display: 'flex',
+  /*display: 'flex',
   flexDirection: 'column',
   minWidth: 0,
   minHeight: '100%',
@@ -33,7 +33,7 @@ const Root = styled('div')(({ theme, ...props }) => ({
     //overflow: 'hidden',
     WebkitOverflowScrolling: 'touch',
     zIndex: 9999,
-  },
+  },*/
 }
 ))
 

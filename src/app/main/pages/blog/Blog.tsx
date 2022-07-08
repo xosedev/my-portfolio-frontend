@@ -1,6 +1,6 @@
 import { Card, CardHeader, Avatar, IconButton, Typography, CardContent, CardActions, Button, styled } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import StructurePage from '../../../shared/components/StructurePage';
+import StructurePage from '../../../shared/components/structure-page/StructurePage';
 import { motion } from 'framer-motion';
 import CodeIcon from '@mui/icons-material/Code';
 
@@ -51,7 +51,6 @@ function BlogPage() {
     hidden: { opacity: 0, y: 40 },
     show: { opacity: 1, y: 0 },
   };
-
 
   return (
     <Root content={

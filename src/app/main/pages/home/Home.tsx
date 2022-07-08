@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
-import StructurePage from '../../../shared/components/StructurePage';
+import StructurePage from '../../../shared/components/structure-page/StructurePage';
 import emoji from "react-easy-emoji";
 import "./style.css";
 import { useSelector } from 'react-redux';
@@ -55,13 +55,11 @@ function HomePage() {
                   </div>
                 </div>
                 <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 flex  justify-center ">
-             
                   <img 
-                    className="scale-0 h-56 sm:h-50 md:h-40 lg:w-80 lg:h-80 lg:mt-40 rounded-full shadow-lg shadow-lg"
+                    className="scale-0 h-56 sm:h-50 md:h-40 lg:w-80 lg:h-80 lg:mt-40 rounded-full shadow-lg"
                     src={user.img}
                     alt=""
-                  />
-              
+                  />              
                 </div>
               </div>
             </div>

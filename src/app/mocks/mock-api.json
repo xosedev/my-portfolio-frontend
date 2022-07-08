@@ -144,7 +144,7 @@
   },
   "components": {
     "schemas": {
-      "user": {
+      "owner": {
         "description": "",
         "type": "object",
         "properties": {

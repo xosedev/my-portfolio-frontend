@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
-import StructurePage from '../../../shared/components/StructurePage';
+import StructurePage from '../../../shared/components/structure-page/StructurePage';
 import { getLinks, selectLinks } from './store/dataSlice';
 import ArrowRight from '@mui/icons-material/ArrowRight';
 import { useEffect } from 'react';

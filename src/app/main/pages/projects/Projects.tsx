@@ -1,7 +1,7 @@
 import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Chip, Grid, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
-import StructurePage from '../../../shared/components/StructurePage';
+import StructurePage from '../../../shared/components/structure-page/StructurePage';
 import { motion } from 'framer-motion';
 import withReducer from '../../../store/withReducer';
 import reducer from './store';
@@ -35,16 +35,12 @@ function ProjectsPage() {
     show: { opacity: 1, y: 0 },
   };
 
-
-
   return (
     <Root content={
       <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto y-6p sm:px-6 lg:px-8">
           <div className="px-4 py-6 sm:px-0">
-            <div className=" rounded-lg ">
               <h4>{t('TITLE')}</h4>
-
               <motion.div variants={container} initial="hidden" animate="show" className="w-full">
                 <Box sx={{ width: '100%' }}>
                   <Grid container rowSpacing={3} columnSpacing={{ xs: 3, sm: 3, md: 3 }}>
@@ -59,14 +55,13 @@ function ProjectsPage() {
                               alt="project img"
                             />
                             <CardContent>
-                              <Typography gutterBottom variant="h5" component="div">
+                              <Typography gutterBottom variant="h6" component="div">
                                 {project.name}
                               </Typography>
                               <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 1 }}>
-                              
-                                {project.desc.map((data: any) => (
-                                  <Grid item xs={3} sm={4} md={4} lg={4} key={project.id}>
-                                  <Chip label={data} size="small" />
+                                {project.desc.map((data: any, index: any) => (
+                                  <Grid item xs={3} sm={4} md={4} lg={4} key={index}>
+                                    <Chip label={data} size="small" />
                                   </Grid>
                                 ))}
                               </Grid>
@@ -80,8 +75,8 @@ function ProjectsPage() {
                         </Card>
                       </Grid>
                     ))}
-                    <Grid item xs={12} sm={6} md={3} key={100000001} >
-                      <Card component={motion.div} variants={item} key={100000001} className='rounded-16'>
+                    <Grid item xs={12} sm={6} md={3} key={0} >
+                      <Card component={motion.div} variants={item} key={0} className='rounded-16'>
                         <CardActionArea>
                           <CardMedia
                             component="img"
@@ -90,10 +85,10 @@ function ProjectsPage() {
                             alt="project img"
                           />
                           <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom component="div">
                               coming soon
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography color="text.secondary">
                               coming soon
                             </Typography>
                           </CardContent>
@@ -105,7 +100,6 @@ function ProjectsPage() {
               </motion.div>
             </div>
           </div>
-        </div>
       </main>
     }>
     </Root>
