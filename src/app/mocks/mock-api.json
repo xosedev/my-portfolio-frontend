@@ -363,13 +363,8 @@
             "status": "off"
           },
           {
-            "id": "about-me",
+            "id": "Skills",
             "name": "AboutMe",
-            "status": "off"
-          },
-          {
-            "id": "projects",
-            "name": "Projects",
             "status": "on"
           },
           {
@@ -377,6 +372,12 @@
             "name": "Works",
             "status": "on"
           },
+          {
+            "id": "projects",
+            "name": "Projects (Experimental)",
+            "status": "on"
+          },
+         
           {
             "id": "games",
             "name": "Game studio",
