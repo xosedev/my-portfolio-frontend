@@ -287,6 +287,55 @@
             "url": "www"
           }
         }
+      },
+      "works": {
+        "description": "",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          }
+          ,
+          "tecnologies": {
+            "type": "string",
+            "minLength": 1
+          },
+          "projects": {
+            "type": "string",
+            "minLength": 1
+          },
+          "img": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "tecnologies",
+          "projects",
+          "img",
+          "url"
+        ],
+        "x-examples": {
+          "project-1": {
+            "id": "1",
+            "name": "Inicio",
+            "tecnologies": "www",
+            "projects": "www",
+            "img": "www",
+            "url": "www"
+          }
+        }
       }
     },
     "securitySchemes": {},
@@ -305,7 +354,7 @@
         "value": [
           {
             "id": "/",
-            "name": "Inicio",
+            "name": "Home",
             "status": "on"
           },
           {
@@ -321,6 +370,11 @@
           {
             "id": "projects",
             "name": "Projects",
+            "status": "on"
+          },
+          {
+            "id": "works",
+            "name": "Works",
             "status": "on"
           },
           {
@@ -408,6 +462,56 @@
             "desc": ["Node Js", "TypeScript", "Express", "OpenApi", "PostgreSQL"],
             "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
             "url":"https://github.com/xosedev/shortcut-manager-backend"
+          }
+        ]
+      },
+      "works": {
+        "value": [
+          {
+            "id": "1",
+            "name": "NTTDATA Chile",
+            "tecnologies": ["Java", "Spring Framework", "ZK Framework", "PostgreSQL", "CSS", "Html", "Javascript", "Git", "SVN"],
+            "projects": ["Movistar Personas", "Entel Personas", "EhCos Clinic", "EhCos Clinic Mexico", "EhCos Clinic España"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://cl.nttdata.com/about-us"
+          },
+          {
+            "id": "2",
+            "name": "Indra Sistemas Chile",
+            "tecnologies": ["Java", "Spring Framework", "Angular/Angular JS", "PostgreSQL", "CSS", "Html", "Javascript", "TypeScript", "Git", "Swagger/Open Api"],
+            "projects": ["Solicitudes Bancarias BBVA", "Ficha 360 BBVA", "Margenes Estatales BBVA"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://www.indracompany.com/es"
+          },
+          {
+            "id": "3",
+            "name": "BBVA - Scotiabank",
+            "tecnologies": ["Java", "Spring Framework", "Angular/Angular JS", "PostgreSQL", "CSS", "Html", "Javascript", "TypeScript", "Git", "Swagger/Open Api", "Jenkins", "AWS"],
+            "projects": ["Solicitudes Bancarias BBVA", "Ficha 360 BBVA", "Margenes Estatales BBVA", "Devops"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://www.scotiabankchile.cl/"
+          },
+          {
+            "id": "4",
+            "name": "Altiuz SPA",
+            "tecnologies": ["Java", "Spring Boot", "Angular/Angular JS", "PostgreSQL", "CSS", "Html", "Javascript", "TypeScript", "Git", "Swagger/Open Api", "Jenkins", "GCP"],
+            "projects": ["Tarjeta Cruz Blanca", "Claroo Chile Cartolas", "Tasacion fiscal SII", "Agendamiento remoto MINSAL","Compras importadas Hites"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://altiuz.com/"
+          },{
+            "id": "5",
+            "name": "Ripley Chile",
+            "tecnologies": ["Node Js", "TypeScript", "Express","React","OpenApi","Microfrontend","GCP", "Firebase"],
+            "projects": ["Rcenter - admin marketplace"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://simple.ripley.cl/"
+          },{
+            "id": "6",
+            "name": "Falabella Chile",
+            "tecnologies": ["React","React Native","Node Js", "TypeScript", "Express","OpenApi","GCP", "KeyCloack", "Firebase"],
+            "projects": ["SOS"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://www.falabella.com/falabella-cl"
           }
         ]
       }
