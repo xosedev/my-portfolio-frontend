@@ -68,7 +68,7 @@ function LinksPage() {
                 <h4 hidden>{t('TITLE')}</h4>
                   <motion.div variants={container} initial="hidden" animate="show" className="w-full">
                     {links.map((link:any) => (
-                      <Card component={motion.div} variants={item} key={link.id} className="mb-5 rounded-16">
+                      <Card hidden={!link.view}  component={motion.div} variants={item} key={link.id} className="mb-5 rounded-16">
                         <CardHeader
                           avatar={<Avatar src={link.icon}></Avatar>}
                           action={

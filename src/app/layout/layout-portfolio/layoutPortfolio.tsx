@@ -23,7 +23,7 @@ const LayoutPortfolio = () => {
                     <div className="flex flex-col flex-auto min-h-0 relative z-10 overflow">
                         {useRoutes(routes)}
                     </div>
-                    <Box>
+                    <Box className='hidden'>
                         <Fab color="primary" aria-label="add" style={{ bottom: 80, right: 10, position: 'fixed' }}>
                             <AddIcon />
                         </Fab>

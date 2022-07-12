@@ -230,13 +230,17 @@
           "url": {
             "type": "string",
             "minLength": 1
+          },
+          "view": {
+            "type": "bool"
           }
         },
         "required": [
           "id",
           "name",
           "icon",
-          "url"
+          "url",
+          "view"
         ],
         "x-examples": {
           "link-1": {
@@ -363,8 +367,8 @@
             "status": "off"
           },
           {
-            "id": "Skills",
-            "name": "AboutMe",
+            "id": "about-me",
+            "name": "About Me",
             "status": "on"
           },
           {
@@ -401,30 +405,35 @@
             "id": "1",
             "name": "Instagram",
             "icon": "https://www.xosedev.com/.uploads/icons/instagram.png",
-            "url": "https://www.instagram.com/xosedev/"
+            "url": "https://www.instagram.com/xosedev/",
+            "view": true
           },
           {
             "id": "2",
             "name": "GitHub",
             "icon": "https://www.xosedev.com/.uploads/icons/github.png",
-            "url": "https://github.com/xosedev"
+            "url": "https://github.com/xosedev",
+            "view": true
           },
           {
             "id": "3",
             "name": "Linkedin",
             "icon": "https://www.xosedev.com/.uploads/icons/linkedin.png",
-            "url": "https://www.linkedin.com/in/xosedev/"
+            "url": "https://www.linkedin.com/in/xosedev/",
+            "view": true
           },
           {
             "id": "4",
             "name": "Twitch",
             "icon": "https://www.xosedev.com/.uploads/icons/twitch.png",
-            "url": "https://www.twitch.tv/xosedev"
+            "url": "https://www.twitch.tv/xosedev",
+            "view": false
           },{
             "id": "5",
             "name": "Youtube",
             "icon": "https://www.xosedev.com/.uploads/icons/youtube.png",
-            "url": "https://www.youtube.com/channel/UCqeqxQh83EZ_PvcpSHAtgyg"
+            "url": "https://www.youtube.com/channel/UCqeqxQh83EZ_PvcpSHAtgyg",
+            "view": false
           }
         ]
       },
@@ -472,7 +481,7 @@
             "id": "1",
             "name": "NTTDATA Chile",
             "tecnologies": ["Java", "Spring Framework", "ZK Framework", "PostgreSQL", "CSS", "Html", "Javascript", "Git", "SVN"],
-            "projects": ["Movistar Personas", "Entel Personas", "EhCos Clinic", "EhCos Clinic Mexico", "EhCos Clinic España"],
+            "projects": ["Movistar Personas", "Entel Personas", "Banco Sabadel","Correos España","EhCos Clinic", "EhCos Clinic Mexico", "EhCos Clinic España"],
             "img":"https://www.xosedev.com/.uploads/icons/nttdata.jpg",
             "url":"https://cl.nttdata.com/about-us"
           },
