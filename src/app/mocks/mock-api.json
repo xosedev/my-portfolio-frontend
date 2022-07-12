@@ -472,7 +472,7 @@
             "name": "NTTDATA Chile",
             "tecnologies": ["Java", "Spring Framework", "ZK Framework", "PostgreSQL", "CSS", "Html", "Javascript", "Git", "SVN"],
             "projects": ["Movistar Personas", "Entel Personas", "EhCos Clinic", "EhCos Clinic Mexico", "EhCos Clinic España"],
-            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "img":"https://www.xosedev.com/.uploads/icons/nttdata.jpg",
             "url":"https://cl.nttdata.com/about-us"
           },
           {
@@ -480,7 +480,7 @@
             "name": "Indra Sistemas Chile",
             "tecnologies": ["Java", "Spring Framework", "Angular/Angular JS", "PostgreSQL", "CSS", "Html", "Javascript", "TypeScript", "Git", "Swagger/Open Api"],
             "projects": ["Solicitudes Bancarias BBVA", "Ficha 360 BBVA", "Margenes Estatales BBVA"],
-            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "img":"https://www.xosedev.com/.uploads/icons/indra.jpeg",
             "url":"https://www.indracompany.com/es"
           },
           {
@@ -488,7 +488,7 @@
             "name": "BBVA - Scotiabank",
             "tecnologies": ["Java", "Spring Framework", "Angular/Angular JS", "PostgreSQL", "CSS", "Html", "Javascript", "TypeScript", "Git", "Swagger/Open Api", "Jenkins", "AWS"],
             "projects": ["Solicitudes Bancarias BBVA", "Ficha 360 BBVA", "Margenes Estatales BBVA", "Devops"],
-            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "img":"https://www.xosedev.com/.uploads/icons/sb.png",
             "url":"https://www.scotiabankchile.cl/"
           },
           {
@@ -496,21 +496,21 @@
             "name": "Altiuz SPA",
             "tecnologies": ["Java", "Spring Boot", "Angular/Angular JS", "PostgreSQL", "CSS", "Html", "Javascript", "TypeScript", "Git", "Swagger/Open Api", "Jenkins", "GCP"],
             "projects": ["Tarjeta Cruz Blanca", "Claroo Chile Cartolas", "Tasacion fiscal SII", "Agendamiento remoto MINSAL","Compras importadas Hites"],
-            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "img":"https://www.xosedev.com/.uploads/icons/altiuz.png",
             "url":"https://altiuz.com/"
           },{
             "id": "5",
             "name": "Ripley Chile",
             "tecnologies": ["Node Js", "TypeScript", "Express","React","OpenApi","Microfrontend","GCP", "Firebase"],
             "projects": ["Rcenter - admin marketplace"],
-            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "img":"https://www.xosedev.com/.uploads/icons/ripley.png",
             "url":"https://simple.ripley.cl/"
           },{
             "id": "6",
             "name": "Falabella Chile",
             "tecnologies": ["React","React Native","Node Js", "TypeScript", "Express","OpenApi","GCP", "KeyCloack", "Firebase"],
             "projects": ["SOS"],
-            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "img":"https://www.xosedev.com/.uploads/icons/falabella.png",
             "url":"https://www.falabella.com/falabella-cl"
           }
         ]
