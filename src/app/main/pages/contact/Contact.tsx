@@ -1,4 +1,4 @@
-import { Button, Paper, Typography, TextField, Dialog, DialogTitle, DialogContentText, DialogActions, DialogContent, Slide } from '@mui/material';
+import { Button, Paper, Typography, TextField } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import _ from 'lodash';
 import { useTranslation } from 'react-i18next';
@@ -8,9 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 import * as yup from 'yup';
 import mailService from '../../../service/mail.service';
 import { Mail } from '../../../model/mail.model';
-import { useEffect } from 'react';
 import React from 'react';
-import { TransitionProps } from '@mui/material/transitions';
 
 const Root = styled(StructurePage)(({ theme }) => ({
 }));
