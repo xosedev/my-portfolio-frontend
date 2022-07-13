@@ -8,7 +8,6 @@ import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 import * as yup from 'yup';
 import mailService from '../../../service/mail.service';
 import { Mail } from '../../../model/mail.model';
-import React from 'react';
 
 const Root = styled(StructurePage)(({ theme }) => ({
 }));
@@ -39,7 +38,6 @@ function LinksPage() {
     }
     const response =  await mailService.sendMail(mailSend)
     if (response.data.status === 200) {
-      setOpen(false)
     }
   }
 
