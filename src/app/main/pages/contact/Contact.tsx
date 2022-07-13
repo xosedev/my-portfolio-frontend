@@ -1,4 +1,4 @@
-import { Button, Paper, Typography, TextField } from '@mui/material';
+import { Button, Paper, Typography, TextField, Dialog, DialogTitle, DialogContentText, DialogActions, DialogContent, Slide } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import _ from 'lodash';
 import { useTranslation } from 'react-i18next';
@@ -6,22 +6,26 @@ import StructurePage from '../../../shared/components/structure-page/StructurePa
 import { Controller, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 import * as yup from 'yup';
+import mailService from '../../../service/mail.service';
+import { Mail } from '../../../model/mail.model';
+import { useEffect } from 'react';
+import React from 'react';
+import { TransitionProps } from '@mui/material/transitions';
 
 const Root = styled(StructurePage)(({ theme }) => ({
 }));
 
 function LinksPage() {
   const { t } = useTranslation('contactPage');
-
+  const [open, setOpen] = React.useState(true);
   const schema = yup.object().shape({
     name: yup.string().required('You must enter a name'),
     subject: yup.string().required('You must enter a subject'),
     message: yup.string().required('You must enter a message'),
     email: yup.string().email('You must enter a valid email').required('You must enter a email'),
   });
-
-  const defaultValues = { name: '', email: '', subject: '', message: '' };
-  const { control, handleSubmit, watch, formState } = useForm({
+  let defaultValues = { name: '', email: '', subject: '', message: '' };
+  const { control,  handleSubmit, watch, formState } = useForm({
     mode: 'onChange',
     defaultValues,
     resolver: yupResolver(schema),
@@ -29,8 +33,17 @@ function LinksPage() {
   const { isValid, dirtyFields, errors } = formState;
   const form = watch();
 
-  function onSubmit(data: any) {
-
+  const onSubmit = async (mail: any) =>{
+    const mailSend: Mail = {
+        userName: mail.name,
+        from: mail.email,
+        subject: mail.subject,
+        text: mail.message
+    }
+    const response =  await mailService.sendMail(mailSend)
+    if (response.data.status === 200) {
+      setOpen(false)
+    }
   }
 
   if (_.isEmpty(form)) {
@@ -143,6 +156,8 @@ function LinksPage() {
             </Paper>
           </div>
         </div>
+
+  
 
       </main>
     }>

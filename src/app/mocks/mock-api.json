@@ -472,6 +472,13 @@
             "desc": ["Node Js", "TypeScript", "Express", "OpenApi", "PostgreSQL"],
             "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
             "url":"https://github.com/xosedev/shortcut-manager-backend"
+          },
+          {
+            "id": "6",
+            "name": "Mail Api",
+            "desc": ["Node Js", "TypeScript", "Express", "OpenApi", "Nodemailer"],
+            "img":"https://cdn.neow.in/news/images/uploaded/2021/04/1619644762_github-desktop_story.jpg",
+            "url":"https://github.com/xosedev/my-mail-api"
           }
         ]
       },
