@@ -15,7 +15,6 @@ const Root = styled(StructurePage)(({ theme }) => ({
 
 function LinksPage() {
   const { t } = useTranslation('contactPage');
-  const [open, setOpen] = React.useState(true);
   const schema = yup.object().shape({
     name: yup.string().required('You must enter a name'),
     subject: yup.string().required('You must enter a subject'),
