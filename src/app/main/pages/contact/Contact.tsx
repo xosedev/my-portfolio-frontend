@@ -8,20 +8,24 @@ import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 import * as yup from 'yup';
 import mailService from '../../../service/mail.service';
 import { Mail } from '../../../model/mail.model';
+import { useState } from 'react';
 
 const Root = styled(StructurePage)(({ theme }) => ({
 }));
 
-function LinksPage() {
+function ContactPage() {
   const { t } = useTranslation('contactPage');
+  const [success, setSuccess] = useState(false)
+  const defaultValues = { name: '', email: '', subject: '', message: '' };
+
   const schema = yup.object().shape({
     name: yup.string().required('You must enter a name'),
     subject: yup.string().required('You must enter a subject'),
     message: yup.string().required('You must enter a message'),
     email: yup.string().email('You must enter a valid email').required('You must enter a email'),
   });
-  let defaultValues = { name: '', email: '', subject: '', message: '' };
-  const { control,  handleSubmit, watch, formState } = useForm({
+
+  const { control, handleSubmit, watch, formState, reset } = useForm({
     mode: 'onChange',
     defaultValues,
     resolver: yupResolver(schema),
@@ -29,16 +33,22 @@ function LinksPage() {
   const { isValid, dirtyFields, errors } = formState;
   const form = watch();
 
-  const onSubmit = async (mail: any) =>{
+  const onSubmit = async (mail: any) => {
     const mailSend: Mail = {
-        userName: mail.name,
-        from: mail.email,
-        subject: mail.subject,
-        text: mail.message
+      userName: mail.name,
+      from: mail.email,
+      subject: mail.subject,
+      text: mail.message
     }
-    const response =  await mailService.sendMail(mailSend)
+    const response = await mailService.sendMail(mailSend)
     if (response.data.status === 200) {
+      reset(defaultValues);
+      setSuccess(true)
     }
+  }
+
+  const resetForm = () => {
+    reset(defaultValues);
   }
 
   if (_.isEmpty(form)) {
@@ -50,7 +60,7 @@ function LinksPage() {
         <div className="max-w-7xl mx-auto y-6p sm:px-6 lg:px-8">
           <div className="px-4 py-6 sm:px-0">
             <h4 >{t('TITLE')}</h4>
-            <Paper className="p-20 pb-20 rounded-2xl">
+            {!success ? (<Paper className="p-20 pb-20 rounded-2xl">
               <form onSubmit={handleSubmit(onSubmit)} className="px-0">
                 <div className="mb-10">
                   <Typography className="text-2xl font-bold tracking-tight">
@@ -137,7 +147,7 @@ function LinksPage() {
                 </div>
               </form>
               <div className="flex items-center justify-end mt-5">
-                <Button className="mx-8">Cancel</Button>
+                <Button type="reset" onClick={resetForm} className="mx-8">Cancel</Button>
                 <Button
                   className="mx-8"
                   variant="contained"
@@ -148,16 +158,26 @@ function LinksPage() {
                   Save
                 </Button>
               </div>
-            </Paper>
+            </Paper>) : (<Paper className="p-20 pb-20 rounded-2xl">
+              <span>Hola gracias por contactarte conmigo, te respondere a la brevedad.</span>
+              <div className="flex items-center justify-end mt-5">
+                <Button
+                  className="mx-8"
+                  variant="contained"
+                  color="secondary"
+                  onClick={() => setSuccess(false)}
+                >
+                  Enviar un nuevo Mail
+                </Button>
+              </div>
+            </Paper>)}
           </div>
         </div>
-
-  
-
       </main>
     }>
     </Root>
+
   );
 }
 
-export default LinksPage;
+export default ContactPage;

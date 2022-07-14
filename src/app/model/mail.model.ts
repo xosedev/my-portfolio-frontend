@@ -1,8 +1,6 @@
 export interface Mail {
     userName: string
-    from: string
-    to?: string  
+    from: string 
     subject: string  
-    text: string  
-    html?: string  
+    text: string
 }
