@@ -43,7 +43,7 @@ function WorksPage() {
       <main>
         <div className="max-w-7xl mx-auto y-6p sm:px-6 lg:px-8">
           <div className="px-4 py-6 sm:px-0">
-            <h4>{t('TITLE')}</h4>
+          <h4 hidden>{t('TITLE')}</h4>
             <motion.div variants={container} initial="hidden" animate="show" className="w-full">
               <Box sx={{ width: '100%' }}>
                 <Grid container rowSpacing={3} columnSpacing={{ xs: 3, sm: 3, md: 3 }}>

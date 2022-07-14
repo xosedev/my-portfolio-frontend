@@ -33,6 +33,10 @@ const NavBar = () => {
   useEffect(() => {
     dispatch(getMenus() as any);
   }, [dispatch]);
+  
+  const toHome = () => {
+    navigate("/");
+  }
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -83,7 +87,7 @@ const NavBar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            onClick={toHome}
             sx={styles.logoNameSx}
           >
             <Logo height='45' width='120' />
@@ -132,7 +136,7 @@ const NavBar = () => {
             variant="h5"
             noWrap
             component="a"
-            href=""
+            onClick={toHome}
             sx={styles.logoNameSxFull}
           >
            <Logo height='45' width='120' />

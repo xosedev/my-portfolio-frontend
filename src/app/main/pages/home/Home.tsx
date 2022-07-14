@@ -5,11 +5,17 @@ import emoji from "react-easy-emoji";
 import "./style.css";
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../../store/userSlice';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@mui/material';
 const Root = styled(StructurePage)(({ theme }) => ({
 }));
 
 function HomePage() {
   const { t } = useTranslation('homePage');
+  const navigator = useNavigate()
+  const toAboutMe = () => {
+    navigator("/about-me");
+  }
   const user = useSelector(selectUser);
   return (
     <Root content={
@@ -34,12 +40,12 @@ function HomePage() {
                         </p>
                         <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                           <div className="rounded-md shadow">
-                            <a
-                              href="/about-me"
+                            <Button
+                              onClick={toAboutMe}
                               className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                             >
                               About me
-                            </a>
+                            </Button>
                           </div>
                           <div className="mt-3 sm:mt-0 sm:ml-3">
                             <a

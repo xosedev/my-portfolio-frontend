@@ -59,7 +59,7 @@ function ContactPage() {
       <main>
         <div className="max-w-7xl mx-auto y-6p sm:px-6 lg:px-8">
           <div className="px-4 py-6 sm:px-0">
-            <h4 >{t('TITLE')}</h4>
+            <h4 hidden>{t('TITLE')}</h4>
             {!success ? (<Paper className="p-20 pb-20 rounded-2xl">
               <form onSubmit={handleSubmit(onSubmit)} className="px-0">
                 <div className="mb-10">
