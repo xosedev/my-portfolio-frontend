@@ -1,4 +1,4 @@
-import { Avatar, Card, CardHeader, IconButton,Typography } from '@mui/material';
+import { Avatar, Card, CardActionArea, CardHeader, IconButton,Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -69,6 +69,7 @@ function LinksPage() {
                   <motion.div variants={container} initial="hidden" animate="show" className="w-full">
                     {links.map((link:any) => (
                       <Card hidden={!link.view}  component={motion.div} variants={item} key={link.id} className="mb-5 rounded-16">
+                        <CardActionArea href={link.url}>
                         <CardHeader
                           avatar={<Avatar src={link.icon}></Avatar>}
                           action={
@@ -82,6 +83,7 @@ function LinksPage() {
                             </span>
                           }
                         />
+                        </CardActionArea>
                       </Card>
                     ))}
                   </motion.div>

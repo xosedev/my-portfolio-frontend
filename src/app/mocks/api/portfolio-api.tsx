@@ -4,7 +4,7 @@ let dataMenusDB = mockApi.components.examples.menus.value
 let dataLinksDB = mockApi.components.examples.links.value
 let dataProjectsDB = mockApi.components.examples.projects.value
 let dataWorksDB = mockApi.components.examples.works.value
-
+let dataSkillsDB = mockApi.components.examples.skills.value
 let dataOwnerDB = mockApi.components.examples.owner.value
 
 mock.onGet('/api/menus').reply((config: any) => {
@@ -25,4 +25,8 @@ mock.onGet('/api/works').reply((config: any) => {
 
 mock.onGet('/api/owner').reply((config: any) => {
   return [200, dataOwnerDB];
+});
+
+mock.onGet('/api/skills').reply((config: any) => {
+  return [200, dataSkillsDB];
 });

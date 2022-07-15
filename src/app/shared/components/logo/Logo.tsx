@@ -1,6 +1,6 @@
 
 import { useTheme } from '@mui/material';
-import { forwardRef, useEffect } from 'react';
+import { forwardRef } from 'react';
 
 interface LogoProps {
   height: string;
@@ -10,11 +10,6 @@ interface LogoProps {
 const Logo = forwardRef((props: LogoProps, ref) => {
 
   const { palette } = useTheme();
-
-  useEffect(() => {
-    console.log(palette);
-  }, [palette]);
-
 
   return (
     <>

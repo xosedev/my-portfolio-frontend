@@ -50,6 +50,37 @@
       },
       "parameters": []
     },
+    "/skills": {
+      "get": {
+        "summary": "Obtain Skills",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/skills"
+                  }
+                },
+                "examples": {
+                  "menu": {
+                    "$ref": "#/components/examples/skills"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_skills",
+        "description": "Obtain skills",
+        "tags": [
+          "Data"
+        ]
+      },
+      "parameters": []
+    },
     "/links": {
       "get": {
         "summary": "Obtain links",
@@ -208,6 +239,52 @@
           "menu-1": {
             "id": "1a470c8e-40ed-4c2d-b590-a4f1f6ead6cc",
             "name": "Inicio"
+          }
+        }
+      },
+      "skills": {
+        "description": "",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tecnologies": {
+            "type": "array",
+            "minLength": 1,
+            "items": [
+              {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "value": {
+                  "type": "number",
+                  "minLength": 1
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "tecnologies"
+        ],
+        "x-examples": {
+          "menu-1": {
+            "id": "1a470c8e-40ed-4c2d-b590-a4f1f6ead6cc",
+            "name": "Java",
+            "value": "100"
           }
         }
       },
@@ -396,6 +473,82 @@
             "id": "contact",
             "name": "Contact",
             "status": "on"
+          }
+        ]
+      },
+      "skills": {
+        "value": [
+          {
+            "id": "1",
+            "name": "Developer",
+            "tecnologies": [
+              {
+                "id": "1",
+                "name": "Java",
+                "value": "90"
+              },
+              {
+                "id": "2",
+                "name": "TypeScript",
+                "value": "70"
+              },
+              {
+                "id": "3",
+                "name": "JavaScript",
+                "value": "70"
+              },
+              {
+                "id": "4",
+                "name": "HTML",
+                "value": "70"
+              },
+              {
+                "id": "5",
+                "name": "CSS",
+                "value": "60"
+              },
+              {
+                "id": "6",
+                "name": "SQL",
+                "value": "80"
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "name": "Framework and Libraries",
+            "tecnologies": [
+              {
+                "id": "1",
+                "name": "Node Js",
+                "value": "80"
+              },
+              {
+                "id": "2",
+                "name": "Zk Framework",
+                "value": "90"
+              },
+              {
+                "id": "3",
+                "name": "Angular",
+                "value": "80"
+              },
+              {
+                "id": "4",
+                "name": "React",
+                "value": "80"
+              },
+              {
+                "id": "5",
+                "name": "React Native",
+                "value": "60"
+              },
+              {
+                "id": "6",
+                "name": "PrimeFaces",
+                "value": "80"
+              }
+            ]
           }
         ]
       },

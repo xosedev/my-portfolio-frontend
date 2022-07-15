@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import styles from './styles';
 import Brightness5Icon from '@mui/icons-material/Brightness5';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '../../../../store/themeSlice';
 import { useNavigate } from 'react-router-dom';
@@ -21,6 +22,7 @@ import reducer from './store';
 import withReducer from '../../../../store/withReducer';
 import { getMenus, selectMenus } from './store/dataSlice';
 import Logo from '../../../../shared/components/logo/Logo';
+import { useTheme } from '@mui/material';
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -29,6 +31,8 @@ const NavBar = () => {
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const menus = useSelector(selectMenus);
+
+  const { palette } = useTheme();
 
   useEffect(() => {
     dispatch(getMenus() as any);
@@ -68,7 +72,7 @@ const NavBar = () => {
     setAnchorElUser(null);
   };
 
-
+ 
 
   return (
     <AppBar position="fixed"
@@ -163,7 +167,12 @@ const NavBar = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <IconButton onClick={changeModeTheme} sx={{ p: 0, marginRight: 5 }}>
-              <Brightness5Icon />
+             
+              {
+                
+                palette.mode === 'dark' ? ( <Brightness5Icon />) : (<DarkModeIcon />)
+              }
+             
             </IconButton>
             <Tooltip title="Menu hidden" className='hidden'>
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
