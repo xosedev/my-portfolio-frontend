@@ -1,4 +1,4 @@
-import { Box, Grid, LinearProgress, LinearProgressProps, Typography } from '@mui/material';
+import { Box, Grid, LinearProgress, LinearProgressProps, Paper, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useEffect } from 'react';
 import emoji from 'react-easy-emoji';
@@ -29,49 +29,49 @@ function AboutMePage() {
           <div className="px-4 py-6 sm:px-0">
             <div className="rounded-lg">
               <h4 hidden>{t('TITLE')}</h4>
-              <div className="text-left">
-                <h1 className="text-4xl tracking-tight font-extrabold mt-0">
-                  Hola nuevamente {' '}
-                  <span className="wave-emoji">{emoji("😸")}</span>
-                </h1>
-                <p className=" mt-3 text-base sm:mt-5 sm:text-lg  sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Por 10+ anios, he trabajado en el desarrollo de software, a lo largo de mi carrera he estado en proyectos,
-                  tanto del lado backend como frontend o ambos a la vez, he trabajado en diferentes tecnologías, como
-                  React, Angular, React Native, Typescript, NodeJS, Java, Spring Boot, etc.
-                  <br />  <br />
-                  He pasado por muchos roles tales como Qa Engineer, Backend Developer, Frontend Developer, FullStack Developer, Tech Lead.
-                  <br />  <br />
-                  Algo que puedo decir es que cada dia me apasiona mas el desarrollo y aun quiero aprender mas.
-                  <br />  <br />
-                  Me gusta mucho la programacion, por eso he decidido crear este sitio web para que puedas ver mis habilidades y conocimientos.
-                  <br />  <br />
-                  Ademas de la programacion tengo otros hobbies, como el deporte, la musica, la peliculas, la lectura, los videojuegos, el cine, etc.
-                  <br />  <br />
-                  Un hobbie que me gusta mucho es el desarrollo de videojuegos idie y el pixel art, por lo cual en mis tiempos libres me gusta mucho aprender y crear.
-                </p>
-                <br />
-              </div>
-            </div>
-            <h1 className="text-4xl tracking-tight font-extrabold ">
-              Skills {' '}
-              <span className="wave-emoji">{emoji("⚙️")}</span>
-            </h1>
-            <Grid item xs={12} sm={12}>
-              {skills.map((skill: any) => (<>
-                <Typography variant="h6" component="div" justifyContent={'left'}>{skill.name}</Typography>
-                <Grid container spacing={5} sx={{ mt: 3, paddingBottom: 5 }}>
-                  {skill.tecnologies.map((tecnology: any) => (<>
-                    <Grid item xs={12} sm={6} style={{ paddingTop: 2 }}>{tecnology.name} </Grid>
-                    <Grid item xs={12} sm={6} style={{ paddingTop: 2 }}>
-                      <Box sx={{ width: '100%' }}>
-                        <LinearProgressWithLabel value={tecnology.value} />
-                      </Box>
-                    </Grid>
 
+              <Paper className="p-20 pb-20 rounded-2xl">
+                <div className="text-left">
+                  <h1 className="text-4xl tracking-tight font-extrabold mt-0">
+                    Hola nuevamente {' '}
+                    <span className="wave-emoji">{emoji("😸")}</span>
+                  </h1>
+                  <p className="text-base sm:mt-5 sm:text-lg  sm:mx-auto md:mt-5 lg:mx-0">
+                  Por 10+ años, he trabajado en el desarrollo de software, a lo largo de mi carrera he estado en proyectos, tanto del lado backend como frontend o ambos a la vez, he trabajado en diferentes tecnologías, como React, Angular, React Native, Typescript, NodeJS, Java, Spring Boot, etc. <br />  
+                  He pasado por muchos roles tales como Qa Engineer, Backend Developer, Frontend Developer, Full Stack Developer, Tech Lead. <br />  
+                  Algo que puedo decir es que cada día me apasiona más el desarrollo y aun quiero aprender más. <br />  
+                  Me gusta mucho la programación, por eso he decidido crear este sitio web para que puedas ver mis habilidades y conocimientos. <br />  
+                  Además de la programación tengo otros hobbies, como el deporte, la música, las películas, la lectura, los videojuegos, el cine, etc. <br />  
+                  Un hobbie que me gusta mucho es el desarrollo de videojuegos indie y el pixel art, por lo cual en mis tiempos libres me gusta mucho aprender y crear. <br />  
+
+                   
+                  </p>
+                  <br />
+                </div>
+
+                <h1 className="text-4xl tracking-tight font-extrabold ">
+                  Skills {' '}
+                  <span className="wave-emoji">{emoji("⚙️")}</span>
+                </h1>
+                <Grid item xs={12} sm={12}>
+                  {skills.map((skill: any) => (<>
+                    <Typography variant="h6" component="div" justifyContent={'left'}>{skill.name}</Typography>
+                    <Grid container spacing={5} sx={{ mt: 3, paddingBottom: 5 }}>
+                      {skill.tecnologies.map((tecnology: any) => (<>
+                        <Grid item xs={12} sm={6} style={{ paddingTop: 2 }}> {tecnology.name} </Grid>
+                        <Grid item xs={12} sm={6} style={{ paddingTop: 2 }}>
+                          <Box sx={{ width: '100%' }}>
+                            <LinearProgressWithLabel value={tecnology.value} />
+                          </Box>
+                        </Grid>
+                      </>))}
+                    </Grid>
                   </>))}
                 </Grid>
-              </>))}
-            </Grid>
+              </Paper>
+
+
+            </div>
           </div>
         </div>
 
