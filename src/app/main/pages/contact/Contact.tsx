@@ -160,7 +160,7 @@ function ContactPage() {
               </div>
             </Paper>) : (<Paper className="p-20 pb-20 rounded-2xl">
               <span>Hola gracias por contactarte conmigo, te respondere a la brevedad.</span>
-              <div className="flex items-center justify-end mt-5">
+              <div className="flex items-center justify-end mt-5 ">
                 <Button
                   className="mx-8"
                   variant="contained"
