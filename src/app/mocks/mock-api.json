@@ -580,13 +580,19 @@
             "name": "Twitch",
             "icon": "https://www.xosedev.com/.uploads/icons/twitch.png",
             "url": "https://www.twitch.tv/xosedev",
-            "view": false
+            "view": true
           },{
             "id": "5",
             "name": "Youtube",
             "icon": "https://www.xosedev.com/.uploads/icons/youtube.png",
             "url": "https://www.youtube.com/channel/UCqeqxQh83EZ_PvcpSHAtgyg",
-            "view": false
+            "view": true
+          },{
+            "id": "6",
+            "name": "TikTok",
+            "icon": "https://www.xosedev.com/.uploads/icons/tiktok.png",
+            "url": "https://www.tiktok.com/@xosedev",
+            "view": true
           }
         ]
       },

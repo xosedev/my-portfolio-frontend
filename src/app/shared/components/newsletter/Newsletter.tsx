@@ -52,10 +52,10 @@ const Newsletter = (props: PropsNewsletter) => {
   }
   return (
     <Dialog open={data} onClose={handleClose}>
-      <DialogTitle>Subscribete</DialogTitle>
+      <DialogTitle>Suscribete</DialogTitle>
       <DialogContent>
         <DialogContentText>
-          Suscríbete con tu correo electrónico para recibir información sobre cursos y nuevos videos.
+          suscribete  con tu correo electrónico para recibir información sobre cursos y nuevos videos.
         </DialogContentText>
         <form onSubmit={handleSubmit(handleSubscribe)} className="px-0">
           <Controller
@@ -78,8 +78,8 @@ const Newsletter = (props: PropsNewsletter) => {
         </form>
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose}>Cancel</Button>
-        <Button disabled={_.isEmpty(dirtyFields) || !isValid} onClick={handleSubmit(handleSubscribe)}>Subscribe</Button>
+        <Button onClick={handleClose}>Cancelar</Button>
+        <Button disabled={_.isEmpty(dirtyFields) || !isValid} onClick={handleSubmit(handleSubscribe)}>Suscribirse</Button>
       </DialogActions>
     </Dialog>
   );

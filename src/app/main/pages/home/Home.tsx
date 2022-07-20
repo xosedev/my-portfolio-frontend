@@ -41,7 +41,7 @@ function HomePage() {
               <h4 hidden>{t('TITLE')}</h4>
               <Paper className="p-20 pb-20 rounded-2xl">
                 <div className="relative overflow-hidden">
-                  <div className="relative z-10 pb-8  sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                  <div className="relative z-10 pb-8  sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-96  lg:pb-28 xl:pb-32">
                     <div className="sm:text-center lg:text-left">
                       <h1 className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">
                         Hola {' '}
@@ -69,7 +69,7 @@ function HomePage() {
                             color='secondary'
                             onClick={() => setOpen(true)}
                             className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md md:py-4 md:text-lg md:px-10">
-                            suscribete
+                            Suscribete
                           </Button>
                         </div>
                       </div>
