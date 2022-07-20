@@ -35,11 +35,11 @@ function HomePage() {
   return (
     <Root content={
       <main>
-        <div className="max-w-7xl mx-auto y-6p sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto y-6p sm:px-6 lg:px-8 ">
           <div className="px-4 py-6 sm:px-0">
             <div className="rounded-lg">
               <h4 hidden>{t('TITLE')}</h4>
-              <Paper className="p-20 pb-20 rounded-2xl">
+              <Paper className="p-5 md:p-20 lg:p-20 xl:p-20 pb-20 rounded-2xl">
                 <div className="relative overflow-hidden">
                   <div className="relative z-10 pb-8  sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-96  lg:pb-28 xl:pb-32">
                     <div className="sm:text-center lg:text-left">

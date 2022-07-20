@@ -30,7 +30,7 @@ function AboutMePage() {
             <div className="rounded-lg">
               <h4 hidden>{t('TITLE')}</h4>
 
-              <Paper className="p-20 pb-20 rounded-2xl">
+              <Paper className="p-5 md:p-20 lg:p-20 xl:p-20 pb-20 rounded-2xl">
                 <div className="text-left">
                   <h1 className="text-4xl tracking-tight font-extrabold mt-0">
                     Hola nuevamente {' '}

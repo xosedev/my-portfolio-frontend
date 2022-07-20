@@ -60,7 +60,7 @@ function ContactPage() {
         <div className="max-w-7xl mx-auto y-6p sm:px-6 lg:px-8">
           <div className="px-4 py-6 sm:px-0">
             <h4 hidden>{t('TITLE')}</h4>
-            {!success ? (<Paper className="p-20 pb-20 rounded-2xl">
+            {!success ? (<Paper className="p-5 md:p-20 lg:p-20 xl:p-20 pb-20 rounded-2xl">
               <form onSubmit={handleSubmit(onSubmit)} className="px-0">
                 <div className="mb-10">
                   <Typography className="text-2xl font-bold tracking-tight">
@@ -158,7 +158,7 @@ function ContactPage() {
                   Enviar Mensaje
                 </Button>
               </div>
-            </Paper>) : (<Paper className="p-20 pb-20 rounded-2xl">
+            </Paper>) : (<Paper className="p-5 md:p-20 lg:p-20 xl:p-20 pb-20 rounded-2xl">
               <span>Hola gracias por contactarte conmigo, te respondere a la brevedad.</span>
               <div className="flex items-center justify-end mt-5 ">
                 <Button
