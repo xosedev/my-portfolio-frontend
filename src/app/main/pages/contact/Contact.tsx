@@ -164,10 +164,10 @@ function ContactPage() {
                 <Button
                   className="mx-8"
                   variant="contained"
-                  color="secondary"
+                  color="primary"
                   onClick={() => setSuccess(false)}
                 >
-                  Enviar un nuevo Mail
+                  Enviar un nuevo Email
                 </Button>
               </div>
             </Paper>)}
