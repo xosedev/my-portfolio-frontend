@@ -147,15 +147,15 @@ function ContactPage() {
                 </div>
               </form>
               <div className="flex items-center justify-end mt-5">
-                <Button type="reset" onClick={resetForm} className="mx-8">Cancel</Button>
+                <Button type="reset" onClick={resetForm} className="mx-8">Cancelar</Button>
                 <Button
                   className="mx-8"
                   variant="contained"
-                  color="secondary"
+                  color="primary"
                   disabled={_.isEmpty(dirtyFields) || !isValid}
                   onClick={handleSubmit(onSubmit)}
                 >
-                  Save
+                  Enviar Mensaje
                 </Button>
               </div>
             </Paper>) : (<Paper className="p-20 pb-20 rounded-2xl">
